@@ -2,7 +2,7 @@
 .process-section {
     width: 100%;
     margin: 0;
-    padding: 50px 5% 40px; /* Reduced bottom padding */
+    padding: 20px 5% 20px; /* Reduced top and bottom padding */
     background-color: #ffffff; /* Alternating white background */
     position: relative;
     font-family: 'Inter', sans-serif;
@@ -16,8 +16,7 @@
 }
 
 .process-icon-top {
-    color: #dfb873;
-    margin-bottom: 15px;
+    display: none;
 }
 
 .process-icon-top svg {
@@ -82,7 +81,7 @@
     grid-template-rows: auto auto;
     gap: 60px 40px; /* Big vertical gap to accommodate overlapping circles */
     max-width: 1050px;
-    margin: 0 auto 70px;
+    margin: 0 auto 20px;
     position: relative;
 }
 

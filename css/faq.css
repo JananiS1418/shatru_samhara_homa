@@ -447,6 +447,22 @@
 @media (max-width: 768px) {
     .faq-grid {
         grid-template-columns: 1fr;
+        gap: 0;
+        background-color: #fffdf9;
+        border: 1px solid rgba(223, 184, 115, 0.3);
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+
+    .faq-accordion {
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .faq-accordion:first-child {
+        border-bottom: 1px solid rgba(223, 184, 115, 0.2);
     }
 
     .faq-footer-banner {
