@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,28 @@
     <!-- Premium typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/temples.css">
 </head>
+
 <body>
 
-    <section class="homa-hero">
-        
-        <!-- The visual foundation: natural width and height, preserving exact aspect ratio -->
-        <img src="images/banner.png" alt="Shatru Samhara Homa" class="homa-banner-image">
+        <!-- Responsive Deity Banner Images -->
+        <picture class="homa-banner-picture">
+            <!-- Tablet viewports -->
+            <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/banner-tab.png">
+            <!-- Mobile viewports -->
+            <source media="(max-width: 767px)" srcset="images/banner-mobile.png">
+            <!-- Default desktop viewports -->
+            <img src="images/banner.png" alt="Shatru Samhara Homa" class="homa-banner-image">
+        </picture>
 
         <div class="homa-content">
 
@@ -32,7 +42,7 @@
                 <span class="block">SAMHARA</span>
                 <span class="block gold">HOMA</span>
             </h1>
-            
+
             <div class="hero-divider">
                 <span class="line"></span>
                 <span class="ornament">❖</span>
@@ -69,7 +79,6 @@
                 <a href="#" class="btn btn-primary">
                     Book Shatru Samhara Homa <i class="fa-solid fa-arrow-right"></i>
                 </a>
-                <a href="#" class="btn btn-secondary">Know More</a>
             </div>
 
         </div>
@@ -82,45 +91,48 @@
             <div class="circle-container">
                 <!-- Outer decorative ring -->
                 <div class="outer-ring"></div>
-                
+
                 <!-- Central Image -->
                 <img src="./images/about.png" alt="Sacred Fire" class="center-fire">
-                
+
                 <!-- Nodes -->
                 <div class="node top-left">
                     <div class="node-icon"><i class="fa-solid fa-om"></i><span class="line-to-center"></span></div>
                     <span class="node-text">Vedic<br>Mantras</span>
                 </div>
-                
+
                 <div class="node top-right">
-                    <div class="node-icon"><i class="fa-solid fa-shield-halved"></i><span class="line-to-center"></span></div>
+                    <div class="node-icon"><i class="fa-solid fa-shield-halved"></i><span class="line-to-center"></span>
+                    </div>
                     <span class="node-text">Divine<br>Protection</span>
                 </div>
-                
+
                 <div class="node bottom-left">
-                    <div class="node-icon"><i class="fa-solid fa-fire"></i><span class="line-to-center"></span></div>
+                    <div class="node-icon"><i class="fa-solid fa-fire"></i><span class="line-to-center"></span>
+                    </div>
                     <span class="node-text">Sacred<br>Fire</span>
                 </div>
-                
+
                 <div class="node bottom-right">
                     <div class="node-icon"><i class="fa-solid fa-spa"></i><span class="line-to-center"></span></div>
                     <span class="node-text">Positive<br>Transformation</span>
                 </div>
-                
+
                 <div class="node bottom-center">
-                    <div class="node-icon"><i class="fa-solid fa-bowl-food"></i><span class="line-to-center"></span></div>
+                    <div class="node-icon"><i class="fa-solid fa-bowl-food"></i><span class="line-to-center"></span>
+                    </div>
                     <span class="node-text">Sacred<br>Offerings</span>
                 </div>
             </div>
         </div>
-        
+
         <div class="about-content">
             <div class="about-badge">
                 <i class="fa-solid fa-star-of-life"></i> ABOUT THE HOMA <i class="fa-solid fa-star-of-life"></i>
             </div>
-            
+
             <h2 class="about-title">What is<br>Shatru Samhara Homa?</h2>
-            
+
             <div class="about-divider">
                 <span class="line"></span>
                 <span class="ornament">❖</span>
@@ -128,8 +140,15 @@
             </div>
 
             <div class="about-text-box">
+                <div class="box-divider">
+                    <span class="line"></span>
+                    <span class="ornament">❖</span>
+                    <span class="line"></span>
+                </div>
                 <p class="about-text">
-                    Shatru Samhara Homa is a sacred Vedic fire ritual performed with specific mantras and offerings to seek divine protection and overcome adversaries, obstacles and negativity.
+                    Shatru Samhara Homa is a sacred Vedic fire ritual performed with specific mantras and offerings
+                    to
+                    seek divine protection and overcome adversaries, obstacles and negativity.
                 </p>
                 <div class="box-divider">
                     <span class="line"></span>
@@ -137,12 +156,262 @@
                     <span class="line"></span>
                 </div>
                 <p class="about-text">
-                    This powerful ritual helps in removing negativity, ensuring obstacles and bringing success, peace and prosperity in life.
+                    This powerful ritual helps in removing negativity, ensuring obstacles and bringing success,
+                    peace
+                    and prosperity in life.
                 </p>
                 <div class="box-lotus"><i class="fa-solid fa-spa"></i></div>
             </div>
         </div>
     </section>
 
+    <!-- Temples of Lord Subramanya Section -->
+    <!-- Note: Recommended Temple Image Size to generate: 800x500 pixels (aspect ratio 1.6:1) -->
+    <section class="temples-section">
+        <div class="temples-header">
+            <div class="trishul-icon">
+                <svg width="24" height="40" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2v34M12 2l-3 4M12 2l3 4M6 10c0 8 12 8 12 0M6 10V6M18 10V6" stroke="#dfb873"
+                        stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+            <h2 class="temples-title">Temples of Lord Subramanya</h2>
+            <div class="temples-divider">
+                <span class="line"></span>
+                <span class="ornament">❖</span>
+                <span class="line"></span>
+            </div>
+        </div>
+
+        <div class="temples-grid">
+            <!-- Card 01 -->
+            <div class="temple-card">
+                <div class="card-number">01</div>
+                <div class="image-container">
+                    <!-- Recommended Image Size to generate: 800x500 pixels -->
+                    <img src="images/temple1.png" alt="Tiruchendur Temple" class="temple-image">
+                    <div class="vel-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C10 6 9 9 9 12C9 14.5 10 16 12 16C14 16 15 14.5 15 12C15 9 14 6 12 2Z"
+                                fill="#dfb873" stroke="#3b0609" stroke-width="1" />
+                            <path d="M12 16V22" stroke="#dfb873" stroke-width="1.5" stroke-linecap="round" />
+                            <circle cx="12" cy="16" r="1.5" fill="#3b0609" stroke="#dfb873" stroke-width="1" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="temple-name">Tiruchendur Temple</h3>
+                    <div class="temple-location">
+                        <i class="fa-solid fa-location-dot"></i> Thoothukudi, Tamil Nadu
+                    </div>
+                    <p class="temple-brief">
+                        A sacred coastal temple where Lord Subramanya is worshipped as the victor over Surapadman. It
+                        symbolizes courage, protection and the triumph of good over evil.
+                    </p>
+                    <button class="read-more-btn" aria-expanded="false">
+                        Read More <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <div class="temple-details">
+                        <div class="details-content">
+                            It is believed that the divine war fought here by Lord Subramanya ended the forces of
+                            negativity and established dharma. Devotees pray here for victory over enemies, removal of
+                            obstacles and fearless progress in life.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 02 -->
+            <div class="temple-card">
+                <div class="card-number">02</div>
+                <div class="image-container">
+                    <!-- Recommended Image Size to generate: 800x500 pixels -->
+                    <img src="images/temple2.png" alt="Thiruparankundram Temple" class="temple-image">
+                    <div class="vel-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C10 6 9 9 9 12C9 14.5 10 16 12 16C14 16 15 14.5 15 12C15 9 14 6 12 2Z"
+                                fill="#dfb873" stroke="#3b0609" stroke-width="1" />
+                            <path d="M12 16V22" stroke="#dfb873" stroke-width="1.5" stroke-linecap="round" />
+                            <circle cx="12" cy="16" r="1.5" fill="#3b0609" stroke="#dfb873" stroke-width="1" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="temple-name">Thiruparankundram Temple</h3>
+                    <div class="temple-location">
+                        <i class="fa-solid fa-location-dot"></i> Madurai, Tamil Nadu
+                    </div>
+                    <p class="temple-brief">
+                        An ancient and historic temple, believed to be the divine wedding place of Lord Subramanya. It
+                        brings harmony, removes obstacles and blesses devotees with strength.
+                    </p>
+                    <button class="read-more-btn" aria-expanded="false">
+                        Read More <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <div class="temple-details">
+                        <div class="details-content">
+                            The temple's spiritual vibrations are known to balance relationships, resolve conflicts and
+                            bless devotees with divine grace, courage and inner strength to overcome challenges.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 03 -->
+            <div class="temple-card">
+                <div class="card-number">03</div>
+                <div class="image-container">
+                    <!-- Recommended Image Size to generate: 800x500 pixels -->
+                    <img src="images/temple3.png" alt="Thirutani Temple" class="temple-image">
+                    <div class="vel-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C10 6 9 9 9 12C9 14.5 10 16 12 16C14 16 15 14.5 15 12C15 9 14 6 12 2Z"
+                                fill="#dfb873" stroke="#3b0609" stroke-width="1" />
+                            <path d="M12 16V22" stroke="#dfb873" stroke-width="1.5" stroke-linecap="round" />
+                            <circle cx="12" cy="16" r="1.5" fill="#3b0609" stroke="#dfb873" stroke-width="1" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="temple-name">Thiruthani Temple</h3>
+                    <div class="temple-location">
+                        <i class="fa-solid fa-location-dot"></i> Tiruvallur, Tamil Nadu
+                    </div>
+                    <p class="temple-brief">
+                        A serene hill temple where Lord Subramanya is worshipped for peace and relief from challenges.
+                        It fills life with confidence, clarity and positive energy.
+                    </p>
+                    <button class="read-more-btn" aria-expanded="false">
+                        Read More <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <div class="temple-details">
+                        <div class="details-content">
+                            It is believed that after the victory over Surapadman, Lord Subramanya came here to attain
+                            peace. Devotees visit for mental peace, emotional balance and to gain confidence for a new
+                            beginning.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 04 -->
+            <div class="temple-card">
+                <div class="card-number">04</div>
+                <div class="image-container">
+                    <!-- Recommended Image Size to generate: 800x500 pixels -->
+                    <img src="images/temple4.png" alt="Palani Temple" class="temple-image">
+                    <div class="vel-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C10 6 9 9 9 12C9 14.5 10 16 12 16C14 16 15 14.5 15 12C15 9 14 6 12 2Z"
+                                fill="#dfb873" stroke="#3b0609" stroke-width="1" />
+                            <path d="M12 16V22" stroke="#dfb873" stroke-width="1.5" stroke-linecap="round" />
+                            <circle cx="12" cy="16" r="1.5" fill="#3b0609" stroke="#dfb873" stroke-width="1" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="temple-name">Palani Temple</h3>
+                    <div class="temple-location">
+                        <i class="fa-solid fa-location-dot"></i> Dindigul, Tamil Nadu
+                    </div>
+                    <p class="temple-brief">
+                        The abode of wisdom and simplicity. Lord Subramanya here is worshipped as Dhandayudhapani,
+                        granting devotees spiritual growth, discipline and inner strength.
+                    </p>
+                    <button class="read-more-btn" aria-expanded="false">
+                        Read More <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <div class="temple-details">
+                        <div class="details-content">
+                            Known for its message of simplicity and detachment, Palani blesses devotees with wisdom,
+                            self-control and the strength to face life with patience and faith.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Benefits strip -->
+        <div class="benefits-strip">
+            <div class="benefit-column">
+                <div class="benefit-icon-wrapper">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="benefit-text-wrapper">
+                    <h4>Divine Protection</h4>
+                    <p>Shields from negativity and harmful influences.</p>
+                </div>
+            </div>
+            <div class="benefit-column">
+                <div class="benefit-icon-wrapper">
+                    <i class="fa-solid fa-crosshairs"></i>
+                </div>
+                <div class="benefit-text-wrapper">
+                    <h4>Victory Over Obstacles</h4>
+                    <p>Grants success over enemies and challenges.</p>
+                </div>
+            </div>
+            <div class="benefit-column">
+                <div class="benefit-icon-wrapper">
+                    <i class="fa-solid fa-spa"></i>
+                </div>
+                <div class="benefit-text-wrapper">
+                    <h4>Inner Peace</h4>
+                    <p>Brings mental peace and emotional balance.</p>
+                </div>
+            </div>
+            <div class="benefit-column">
+                <div class="benefit-icon-wrapper">
+                    <i class="fa-solid fa-mountain"></i>
+                </div>
+                <div class="benefit-text-wrapper">
+                    <h4>Strength & Courage</h4>
+                    <p>Empowers to face life's battles with confidence.</p>
+                </div>
+            </div>
+            <div class="benefit-column">
+                <div class="benefit-icon-wrapper">
+                    <i class="fa-solid fa-sun"></i>
+                </div>
+                <div class="benefit-text-wrapper">
+                    <h4>Spiritual Growth</h4>
+                    <p>Enhances devotion, wisdom and inner growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script for Read More functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const readMoreBtns = document.querySelectorAll('.read-more-btn');
+
+            readMoreBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const card = btn.closest('.temple-card');
+                    const details = card.querySelector('.temple-details');
+                    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+                    if (isExpanded) {
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.classList.remove('active');
+                        details.classList.remove('expanded');
+                        btn.innerHTML = 'Read More <i class="fa-solid fa-chevron-down"></i>';
+                    } else {
+                        btn.setAttribute('aria-expanded', 'true');
+                        btn.classList.add('active');
+                        details.classList.add('expanded');
+                        btn.innerHTML = 'Read Less <i class="fa-solid fa-chevron-up"></i>';
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
+
 </html>
