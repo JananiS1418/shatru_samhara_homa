@@ -139,15 +139,16 @@
     /* No top padding, we use margin on image */
     text-align: center;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
 .pkg-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+    transform: translateY(-6px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.08);
+    border-color: rgba(223, 184, 115, 0.6);
 }
 
 
@@ -170,6 +171,11 @@
     /* White gap inside the outer ring */
     z-index: 2;
     /* Outer colored ring is added via box-shadow in themes below */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pkg-card:hover .top-circle-icon {
+    transform: translateX(-50%) translateY(-3px) scale(1.05);
 }
 
 /* Circular Image Container */
@@ -189,11 +195,38 @@
     overflow: hidden;
 }
 
+.pkg-img-circle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    z-index: 5;
+    pointer-events: none;
+}
+
+@keyframes shineSweep {
+    0% { left: -100%; }
+    100% { left: 200%; }
+}
+
+.pkg-card:hover .pkg-img-circle::after {
+    animation: shineSweep 0.8s ease-in-out;
+}
+
 .pkg-img-circle img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.pkg-card:hover .pkg-img-circle img {
+    transform: scale(1.1);
 }
 
 /* Card Titles */
@@ -401,6 +434,19 @@
     font-size: 24px;
     flex-shrink: 0;
     background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+@keyframes pulseRing {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(223, 184, 115, 0.6); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(223, 184, 115, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(223, 184, 115, 0); }
+}
+
+.t-item:hover .t-icon {
+    animation: pulseRing 1.5s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+    background-color: rgba(223, 184, 115, 0.15);
+    border-color: #c99339;
 }
 
 .t-icon.maroon {
