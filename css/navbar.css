@@ -82,24 +82,27 @@ html {
         box-sizing: border-box;
     }
     .sub-navbar {
-        justify-content: center; /* Center the wrapped items */
-        flex-wrap: wrap; /* Wrap into multiple rows */
-        border-radius: 20px;
-        padding: 8px 10px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        border-radius: 30px;
+        padding: 8px 12px;
         gap: 8px;
         max-width: 100%;
         width: 100%;
-        overflow-x: visible; /* Remove horizontal scrolling */
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
     }
     .nav-link {
-        padding: 6px 12px;
+        padding: 8px 16px;
         font-size: 13px;
-        flex: 1 1 calc(33.333% - 16px); /* Roughly 3 items per row if space permits, or let them size naturally */
-        text-align: center; /* Center text in wrapping boxes */
+        flex: 0 0 auto;
+        scroll-snap-align: start;
     }
     
     /* Ensure the last item has space on the right when fully scrolled */
     .sub-navbar::after {
-        display: none; /* No longer needed as we are wrapping instead of scrolling */
+        content: '';
+        padding-right: 12px;
     }
 }

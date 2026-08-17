@@ -23,32 +23,48 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* Navbar scroll spy logic */
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".nav-link");
-
 // Function to update active link
-function updateActiveLink() {
+let currentActiveSection = "";
+
+function handleScrollSpy() {
+    // Dynamically query sections to guarantee they exist
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-link");
+    
     let current = "";
+    
+    // Determine which section is currently in view
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        // Offset by 150px to trigger slightly before reaching the section
-        if (window.scrollY >= sectionTop - 150) {
+        const rect = section.getBoundingClientRect();
+        // If the top of the section is in the upper half of the viewport (or above it)
+        if (rect.top <= window.innerHeight / 2) {
             current = section.getAttribute("id");
         }
     });
 
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-        }
-    });
+    if (current && current !== currentActiveSection) {
+        currentActiveSection = current;
+        
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+                link.classList.add("active");
+                
+                // Safely scroll the mobile navbar horizontally to keep the active link centered
+                const subNavbar = document.querySelector('.sub-navbar');
+                if (subNavbar && subNavbar.scrollWidth > subNavbar.clientWidth) {
+                    subNavbar.scrollLeft = link.offsetLeft - (subNavbar.clientWidth / 2) + (link.clientWidth / 2);
+                }
+            }
+        });
+    }
 }
 
-// Update on scroll
-window.addEventListener("scroll", updateActiveLink);
-// Initial call to set correct state on load
-updateActiveLink();
+// Wait for DOM to load before attaching listener and triggering
+document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('scroll', handleScrollSpy);
+    setTimeout(handleScrollSpy, 100);
+});
 
 /* --------------------------------------------------------------------------
    Reviews Carousel Logic
@@ -161,4 +177,6 @@ faqItems.forEach(item => {
         }
     });
 });
+
+
 
