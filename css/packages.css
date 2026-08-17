@@ -1,0 +1,501 @@
+/* ==========================================================================
+   Packages Section Styles (Redesign)
+   ========================================================================== */
+
+.packages-section {
+    position: relative;
+    padding: 10px 20px 30px;
+    background: radial-gradient(circle at center top, #ffffff 0%, #fffaf2 100%);
+    overflow: hidden;
+}
+
+/* Background Mandala Ornaments */
+.packages-bg-left,
+.packages-bg-right {
+    position: absolute;
+    top: 50px;
+    width: 250px;
+    height: 400px;
+    background-image: url('../images/mandala-bg.png');
+    /* Fallback pattern */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.packages-bg-left {
+    left: -50px;
+}
+
+.packages-bg-right {
+    right: -50px;
+    transform: scaleX(-1);
+}
+
+.packages-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   Section Headers
+   -------------------------------------------------------------------------- */
+.top-lotus-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 60px;
+    position: relative;
+    padding-top: 30px;
+}
+
+.top-lotus {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #dfb873;
+    font-size: 24px;
+}
+
+.section-header h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #3b0609;
+    letter-spacing: 1px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.header-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #8b7156;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.header-line-left,
+.header-line-right {
+    height: 1px;
+    width: 100px;
+    background-color: #dfb873;
+    position: relative;
+    opacity: 0.7;
+}
+
+.header-line-left::after,
+.header-line-right::after {
+    content: '❖';
+    position: absolute;
+    color: #dfb873;
+    font-size: 14px;
+    top: -8px;
+}
+
+.header-line-left {
+    background: linear-gradient(to right, transparent, #dfb873);
+}
+
+.header-line-left::after {
+    right: -20px;
+}
+
+.header-line-right {
+    background: linear-gradient(to left, transparent, #dfb873);
+}
+
+.header-line-right::after {
+    left: -20px;
+}
+
+/* --------------------------------------------------------------------------
+   Packages Grid
+   -------------------------------------------------------------------------- */
+.new-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 0 auto 60px;
+    max-width: 1150px;
+}
+
+/* Base Card Styling */
+.pkg-card {
+    background: #fffdf9;
+    border: 1px solid;
+    border-radius: 16px;
+    position: relative;
+    padding: 0 20px 25px;
+    /* No top padding, we use margin on image */
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.pkg-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+
+/* Top Floating Circular Icon */
+.top-circle-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    border: 3px solid #fffdf9;
+    /* White gap inside the outer ring */
+    z-index: 2;
+    /* Outer colored ring is added via box-shadow in themes below */
+}
+
+/* Circular Image Container */
+.pkg-img-circle {
+    width: 170px;
+    height: 170px;
+    margin: 40px auto 15px;
+    /* Tighter margins */
+    border-radius: 50%;
+    border: 6px solid #fffdf9;
+    /* Thick white border to cut into accent */
+    position: relative;
+    z-index: 1;
+    /* Above the accent block */
+    background-color: #fdf5e6;
+    /* Removed heavy box-shadow so it blends seamlessly like the mockup */
+    overflow: hidden;
+}
+
+.pkg-img-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Card Titles */
+.pkg-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 5px 0 20px;
+    line-height: 1.4;
+    min-height: 42px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Decorative divider under title */
+.pkg-card h3::after {
+    content: '〰 ❖ 〰';
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8px;
+    letter-spacing: 1px;
+    color: #dfb873;
+    opacity: 0.8;
+}
+
+/* Card Description */
+.pkg-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: #4a3831;
+    line-height: 1.5;
+    margin: 0 0 15px;
+    padding: 0 10px;
+    flex-grow: 1;
+    z-index: 1;
+}
+
+/* Pricing Buttons (Ticket Stub Shape) */
+.action-btn {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 6px 8px 6px 20px;
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: filter 0.3s ease;
+    /* Ticket stub effect using radial gradient mask */
+    -webkit-mask-image: radial-gradient(circle at top left, transparent 10px, black 11px),
+        radial-gradient(circle at top right, transparent 10px, black 11px),
+        radial-gradient(circle at bottom left, transparent 10px, black 11px),
+        radial-gradient(circle at bottom right, transparent 10px, black 11px);
+    -webkit-mask-position: top left, top right, bottom left, bottom right;
+    -webkit-mask-size: 51% 51%;
+    -webkit-mask-repeat: no-repeat;
+    z-index: 1;
+}
+
+.action-btn:hover {
+    filter: brightness(1.1);
+}
+
+.arrow-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   Thematic Colors
+   -------------------------------------------------------------------------- */
+/* Theme 1: Maroon */
+.theme-maroon {
+    border-color: rgba(106, 26, 30, 0.3);
+}
+
+.theme-maroon .top-circle-icon {
+    background-color: #6a1a1e;
+    box-shadow: 0 0 0 1.5px #6a1a1e;
+}
+
+.theme-maroon h3 {
+    color: #6a1a1e;
+}
+
+.theme-maroon .action-btn {
+    background-color: #6a1a1e;
+}
+
+/* Theme 2: Gold */
+.theme-gold {
+    border-color: rgba(201, 147, 57, 0.3);
+}
+
+.theme-gold .top-circle-icon {
+    background-color: #c99339;
+    box-shadow: 0 0 0 1.5px #c99339;
+}
+
+.theme-gold h3 {
+    color: #c99339;
+}
+
+.theme-gold .action-btn {
+    background-color: #c99339;
+}
+
+/* Theme 3: Pink-Maroon */
+.theme-pink {
+    border-color: rgba(165, 59, 83, 0.3);
+}
+
+.theme-pink .top-circle-icon {
+    background-color: #a53b53;
+    box-shadow: 0 0 0 1.5px #a53b53;
+}
+
+.theme-pink h3 {
+    color: #a53b53;
+}
+
+.theme-pink .action-btn {
+    background-color: #a53b53;
+}
+
+/* Theme 4: Green */
+.theme-green {
+    border-color: rgba(59, 90, 50, 0.3);
+}
+
+.theme-green .top-circle-icon {
+    background-color: #3b5a32;
+    box-shadow: 0 0 0 1.5px #3b5a32;
+}
+
+.theme-green h3 {
+    color: #3b5a32;
+}
+
+.theme-green .action-btn {
+    background-color: #3b5a32;
+}
+
+
+/* --------------------------------------------------------------------------
+   Trust Footer Box (New 4-Column Layout)
+   -------------------------------------------------------------------------- */
+.trust-footer-box {
+    border: 1px solid rgba(223, 184, 115, 0.4);
+    border-radius: 12px;
+    padding: 20px 30px;
+    background-color: transparent;
+    /* No background, takes radial bg */
+    position: relative;
+    margin: 40px auto 0;
+    max-width: 1150px;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.t-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+/* Vertical dividers using pseudo-element for height control */
+.t-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    /* Halfway across the 30px gap */
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background-color: rgba(223, 184, 115, 0.4);
+}
+
+.t-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #dfb873;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+    background-color: transparent;
+}
+
+.t-icon.maroon {
+    color: #6a1a1e;
+}
+
+.t-icon.gold {
+    color: #c99339;
+}
+
+.t-icon.green {
+    color: #3b5a32;
+}
+
+.t-content h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: #4a1c20;
+    /* Darker maroon text */
+    margin: 0 0 4px;
+    letter-spacing: 0.5px;
+}
+
+.t-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    color: #4a3831;
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+/* --------------------------------------------------------------------------
+   Responsive Layouts
+   -------------------------------------------------------------------------- */
+@media (max-width: 990px) {
+    .new-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px 30px;
+        /* Extra vertical gap for overlapping icons */
+    }
+
+    .trust-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    .t-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .t-item:not(:last-child)::after {
+        right: -7px;
+        top: 20%;
+        height: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-lotus-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-line-left,
+    .header-line-right {
+        display: none;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+    }
+
+}
+
+@media (max-width: 580px) {
+    .new-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px; /* Add padding for breathing room */
+    }
+
+    .pkg-card {
+        max-width: 340px; /* Constrain card width */
+        margin: 0 auto; /* Center it */
+    }
+
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .t-item::after {
+        display: none !important;
+    }
+}

@@ -1,27 +1,41 @@
 /* Temples Section Stylesheet */
 
 .temples-section {
-    width: min(100% - 40px, 1300px);
-    margin: 40px auto;
-    padding: 60px 40px;
-    background-color: #fffaf2;
-    border-radius: 20px;
-    border: 1px solid rgba(223, 184, 115, 0.4);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    width: 100%;
+    margin: 0;
+    padding: 30px 5% 20px; /* Reduced top padding to close gap */
+    background-color: #ffffff; /* Alternating white background */
     position: relative;
     font-family: 'Inter', sans-serif;
 }
 
-/* Header */
 .temples-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
+    max-width: 1300px;
 }
 
-.trishul-icon {
-    display: inline-block;
+.temples-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #c97116;
+    letter-spacing: 1px;
     margin-bottom: 12px;
-    animation: gentlePulse 3s infinite ease-in-out;
+}
+
+.temples-subtitle .line {
+    width: 30px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #dfb873, transparent);
+}
+
+.temples-subtitle .ornament {
+    font-size: 10px;
+    color: #dfb873;
 }
 
 .temples-title {
@@ -30,8 +44,8 @@
     font-weight: 700;
     color: #3b0609;
     margin: 0 0 15px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    text-transform: none; /* Changed from uppercase to match screenshot */
+    letter-spacing: 1px;
 }
 
 .temples-divider {
@@ -54,12 +68,20 @@
     font-size: 14px;
 }
 
+.temples-description {
+    font-size: 13px;
+    color: #5c4a42;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
 /* Grid Layout */
 .temples-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
-    margin-bottom: 50px;
+    max-width: 1300px;
+    margin: 0 auto 50px;
 }
 
 /* Cards */
@@ -86,10 +108,10 @@
     position: absolute;
     top: 15px;
     left: 15px;
-    width: 34px;
-    height: 34px;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid #dfb873;
+    width: 32px;
+    height: 32px;
+    background: #ffffff;
+    border: 1.5px solid rgba(223, 184, 115, 0.8);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -97,9 +119,9 @@
     font-family: 'Cinzel', serif;
     font-size: 14px;
     font-weight: 700;
-    color: #3b0609;
+    color: #c97116;
     z-index: 10;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Image Wrapper */
@@ -125,65 +147,115 @@
 /* Vel Badge overlay */
 .vel-badge {
     position: absolute;
-    bottom: -20px;
+    bottom: -22px;
     left: 50%;
     transform: translateX(-50%);
     width: 44px;
     height: 44px;
-    background: #3b0609;
-    border: 2px solid #dfb873;
+    background: #ffffff;
+    border: 1px solid rgba(223, 184, 115, 0.8);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 5;
-    box-shadow: 0 4px 10px rgba(59, 6, 9, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
 }
 
 .temple-card:hover .vel-badge {
-    transform: translateX(-50%) scale(1.1);
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* Ensure the SVG inside the badge uses the right colors and is fully visible */
+.vel-badge svg {
+    width: 24px !important;
+    height: 24px !important;
+    flex-shrink: 0;
+    display: block;
+}
+.vel-badge svg path:first-child {
+    fill: #dfb873;
+    stroke: none;
+}
+.vel-badge svg path:nth-child(2) {
+    stroke: #dfb873;
+}
+.vel-badge svg circle {
+    fill: #ffffff;
+    stroke: #dfb873;
 }
 
 /* Card Body */
 .card-body {
-    padding: 30px 20px 24px;
+    padding: 35px 20px 24px;
     text-align: center;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    background-color: #fffdf9; /* Match screenshot cream card body */
 }
 
 .temple-name {
     font-family: 'Cinzel', serif;
-    font-size: 20px;
+    font-size: 17px; /* Reduced from 19px to prevent awkward wrapping */
     font-weight: 700;
-    color: #3b0609;
-    margin: 0 0 8px;
+    color: #4a3831;
+    margin: 0 0 6px;
     line-height: 1.3;
 }
 
 .temple-location {
-    font-size: 13px;
+    font-size: 11px;
     color: #c97116;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 4px;
+    position: relative;
+    padding-bottom: 16px;
 }
 
 .temple-location i {
-    font-size: 12px;
+    font-size: 11px;
+}
+
+/* Divider below location */
+.temple-location::after {
+    content: '❖';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 9px;
+    color: #dfb873;
+    background: #fffdf9;
+    padding: 0 4px;
+    z-index: 2;
+}
+
+.temple-location::before {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #dfb873, transparent);
+    z-index: 1;
 }
 
 .temple-brief {
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 500;
     line-height: 1.6;
-    color: #4a3831;
+    color: #2a150e; /* Darker for better readability */
     margin: 0 0 16px;
     flex-grow: 1;
+    padding: 0 10px;
 }
 
 /* Read More Button styling */
@@ -191,7 +263,7 @@
     background: none;
     border: none;
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     color: #c97116;
     cursor: pointer;
@@ -205,11 +277,11 @@
 }
 
 .read-more-btn:hover {
-    color: #3b0609;
+    color: #4a3831;
 }
 
 .read-more-btn i {
-    font-size: 10px;
+    font-size: 9px;
     transition: transform 0.3s ease;
 }
 
@@ -223,72 +295,61 @@
     overflow: hidden;
     transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, padding 0.4s ease;
     opacity: 0;
-    background: #fffbf5;
+    background: #fffdf9;
     border-radius: 8px;
-    border: 0 solid rgba(223, 184, 115, 0);
+    position: relative;
+    border: 0px solid rgba(223, 184, 115, 0);
 }
 
 .temple-details.expanded {
-    max-height: 160px;
+    max-height: 200px;
     opacity: 1;
     margin-top: 15px;
-    padding: 15px;
-    border: 1px dashed rgba(223, 184, 115, 0.4);
+    padding: 20px 15px;
+    border: 1px solid rgba(223, 184, 115, 0.3);
+}
+
+/* Ornate corners for the details box */
+.temple-details::before,
+.temple-details::after {
+    content: '❖';
+    position: absolute;
+    font-size: 14px;
+    color: #dfb873;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.temple-details::before {
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fffdf9;
+    padding: 0 5px;
+}
+
+.temple-details::after {
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fffdf9;
+    padding: 0 5px;
+}
+
+.temple-details.expanded::before,
+.temple-details.expanded::after {
+    opacity: 1;
 }
 
 .details-content {
-    font-size: 13.5px;
+    font-size: 12px;
+    font-weight: 500;
     line-height: 1.6;
-    color: #5c4a42;
+    color: #2a150e; /* Darker for better readability */
     text-align: center;
 }
 
-/* Bottom Benefits Bar */
-.benefits-strip {
-    background: #ffffff;
-    border: 1px solid rgba(223, 184, 115, 0.4);
-    border-radius: 12px;
-    padding: 20px 25px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
-}
 
-.benefit-column {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-}
-
-.benefit-icon-wrapper {
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
-    background: #fffbf5;
-    border: 1px solid rgba(223, 184, 115, 0.5);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #c97116;
-    font-size: 16px;
-    box-shadow: 0 2px 6px rgba(223, 184, 115, 0.05);
-}
-
-.benefit-text-wrapper h4 {
-    margin: 0 0 4px;
-    font-size: 13.5px;
-    font-weight: 600;
-    color: #3b0609;
-}
-
-.benefit-text-wrapper p {
-    margin: 0;
-    font-size: 12px;
-    line-height: 1.4;
-    color: #6e584f;
-}
 
 /* Animations */
 @keyframes gentlePulse {
@@ -298,14 +359,9 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 1100px) {
+@media (max-width: 990px) { /* Changed from 1100px so 1024px laptops keep 4 columns */
     .temples-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    
-    .benefits-strip {
-        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
 }
@@ -318,15 +374,15 @@
     .temples-title {
         font-size: 30px;
     }
-    
-    .benefits-strip {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
 }
 
 @media (max-width: 580px) {
     .temples-grid {
         grid-template-columns: 1fr;
+        padding: 0 20px; 
+    }
+    .temple-card {
+        max-width: 340px; /* Prevents card from stretching too wide on mobile */
+        margin: 0 auto; /* Centers the card */
     }
 }

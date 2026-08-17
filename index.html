@@ -17,9 +17,31 @@
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/temples.css">
+    <link rel="stylesheet" href="css/benefits.css">
+    <link rel="stylesheet" href="css/process.css">
+    <link rel="stylesheet" href="css/packages.css">
+    <link rel="stylesheet" href="css/reviews.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/navbar.css">
+
+    <!-- External Script with defer -->
+    <!-- SVG Assets -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <clipPath id="cardAccentPath" clipPathUnits="objectBoundingBox">
+                <!-- A smooth sweeping curve for the top-left card accent -->
+                <!-- Starts at top-left, goes to just past top-center, curves smoothly to left-middle -->
+                <path d="M 0,0 L 0.53,0 C 0.45,0.4 0.25,0.7 0,1 Z" />
+            </clipPath>
+        </defs>
+    </svg>
+
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
+
+    <section class="homa-hero">
 
         <!-- Responsive Deity Banner Images -->
         <picture class="homa-banner-picture">
@@ -50,8 +72,7 @@
             </div>
 
             <h2 class="hero-subtitle">
-                Destroy Negativity. Remove Obstacles.<br>
-                Invoke Divine Protection.
+                Destroy Negativity. Remove <br class="tab-br">Obstacles. <br class="desktop-br">Invoke Divine Protection.
             </h2>
 
             <p class="hero-description">
@@ -79,108 +100,121 @@
                 <a href="#" class="btn btn-primary">
                     Book Shatru Samhara Homa <i class="fa-solid fa-arrow-right"></i>
                 </a>
+                <a href="#" class="btn btn-secondary mobile-only">
+                    Know More
+                </a>
             </div>
 
         </div>
 
     </section>
 
+    <!-- Premium Sticky Navigation Bar -->
+    <div class="sub-navbar-wrapper">
+        <nav class="sub-navbar">
+            <a href="#about" class="nav-link active">About Homa</a>
+            <a href="#temples" class="nav-link">Temple Details</a>
+            <a href="#benefits" class="nav-link">Benefits</a>
+            <a href="#process" class="nav-link">Process</a>
+            <a href="#packages" class="nav-link">Packages</a>
+            <a href="#reviews" class="nav-link">Reviews</a>
+            <a href="#faq" class="nav-link">FAQs</a>
+        </nav>
+    </div>
+
     <!-- About Section -->
-    <section class="about-section">
-        <div class="about-visual">
-            <div class="circle-container">
-                <!-- Outer decorative ring -->
-                <div class="outer-ring"></div>
-
-                <!-- Central Image -->
-                <img src="./images/about.png" alt="Sacred Fire" class="center-fire">
-
-                <!-- Nodes -->
-                <div class="node top-left">
-                    <div class="node-icon"><i class="fa-solid fa-om"></i><span class="line-to-center"></span></div>
-                    <span class="node-text">Vedic<br>Mantras</span>
-                </div>
-
-                <div class="node top-right">
-                    <div class="node-icon"><i class="fa-solid fa-shield-halved"></i><span class="line-to-center"></span>
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <!-- Left Side: Image -->
+            <div class="about-visual">
+                <div class="about-image-wrapper">
+                    <!-- The dark maroon top badge -->
+                    <div class="about-image-badge">
+                        <i class="fa-solid fa-fire"></i> <!-- Using fire icon as lamp approximation -->
                     </div>
-                    <span class="node-text">Divine<br>Protection</span>
+                    <!-- The main image -->
+                    <img src="./images/about.png" alt="Sacred Fire Ritual" class="about-main-image">
+                </div>
+            </div>
+
+            <!-- Right Side: Content -->
+            <div class="about-content">
+                <div class="about-subtitle">
+                    <span class="line"></span>
+                    <span class="ornament">❖</span>
+                    ABOUT THE HOMA
+                    <span class="ornament">❖</span>
+                    <span class="line"></span>
                 </div>
 
-                <div class="node bottom-left">
-                    <div class="node-icon"><i class="fa-solid fa-fire"></i><span class="line-to-center"></span>
+                <div class="about-header-ornament">
+                    <i class="fa-solid fa-dharmachakra"></i>
+                </div>
+
+                <h2 class="about-title">WHAT IS<br>SHATRU SAMHARA HOMA?</h2>
+
+                <div class="about-title-ornament">
+                    <span class="ornament">❖</span>
+                </div>
+
+                <div class="about-text-container">
+                    <p class="about-text">
+                        Shatru Samhara Homa is a sacred Vedic fire ritual performed with specific mantras and offerings
+                        to seek divine protection and overcome adversaries, obstacles and negativity.
+                    </p>
+                    <p class="about-text">
+                        This powerful ritual helps in removing negativity, ensuring obstacles and bringing success,
+                        peace and prosperity in life.
+                    </p>
+                </div>
+
+                <!-- Features Card at bottom -->
+                <div class="about-features-card">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="feature-label">DIVINE<br>PROTECTION</div>
                     </div>
-                    <span class="node-text">Sacred<br>Fire</span>
-                </div>
-
-                <div class="node bottom-right">
-                    <div class="node-icon"><i class="fa-solid fa-spa"></i><span class="line-to-center"></span></div>
-                    <span class="node-text">Positive<br>Transformation</span>
-                </div>
-
-                <div class="node bottom-center">
-                    <div class="node-icon"><i class="fa-solid fa-bowl-food"></i><span class="line-to-center"></span>
+                    <div class="feature-divider"></div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-spa"></i></div>
+                        <div class="feature-label">POSITIVE<br>TRANSFORMATION</div>
                     </div>
-                    <span class="node-text">Sacred<br>Offerings</span>
+                    <div class="feature-divider"></div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-om"></i></div>
+                        <div class="feature-label">VEDIC<br>MANTRAS</div>
+                    </div>
+                    <div class="feature-divider"></div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div class="feature-label">SACRED FIRE<br>RITUAL</div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="about-content">
-            <div class="about-badge">
-                <i class="fa-solid fa-star-of-life"></i> ABOUT THE HOMA <i class="fa-solid fa-star-of-life"></i>
-            </div>
-
-            <h2 class="about-title">What is<br>Shatru Samhara Homa?</h2>
-
-            <div class="about-divider">
-                <span class="line"></span>
-                <span class="ornament">❖</span>
-                <span class="line"></span>
-            </div>
-
-            <div class="about-text-box">
-                <div class="box-divider">
-                    <span class="line"></span>
-                    <span class="ornament">❖</span>
-                    <span class="line"></span>
-                </div>
-                <p class="about-text">
-                    Shatru Samhara Homa is a sacred Vedic fire ritual performed with specific mantras and offerings
-                    to
-                    seek divine protection and overcome adversaries, obstacles and negativity.
-                </p>
-                <div class="box-divider">
-                    <span class="line"></span>
-                    <span class="ornament">❖</span>
-                    <span class="line"></span>
-                </div>
-                <p class="about-text">
-                    This powerful ritual helps in removing negativity, ensuring obstacles and bringing success,
-                    peace
-                    and prosperity in life.
-                </p>
-                <div class="box-lotus"><i class="fa-solid fa-spa"></i></div>
-            </div>
-        </div>
+        <!-- Decorative Bottom Border -->
+        <div class="about-bottom-border"></div>
     </section>
 
     <!-- Temples of Lord Subramanya Section -->
     <!-- Note: Recommended Temple Image Size to generate: 800x500 pixels (aspect ratio 1.6:1) -->
-    <section class="temples-section">
+    <section class="temples-section" id="temples">
         <div class="temples-header">
-            <div class="trishul-icon">
-                <svg width="24" height="40" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2v34M12 2l-3 4M12 2l3 4M6 10c0 8 12 8 12 0M6 10V6M18 10V6" stroke="#dfb873"
-                        stroke-width="2" stroke-linecap="round" />
-                </svg>
+            <div class="temples-subtitle">
+                <span class="line"></span>
+                <span class="ornament">❖</span>
+                SACRED TEMPLES
+                <span class="ornament">❖</span>
+                <span class="line"></span>
             </div>
-            <h2 class="temples-title">Temples of Lord Subramanya</h2>
+            <h2 class="temples-title">Temples Associated with This Homa</h2>
             <div class="temples-divider">
                 <span class="line"></span>
                 <span class="ornament">❖</span>
                 <span class="line"></span>
             </div>
+            <p class="temples-description">Ancient divine abodes where this powerful Vedic ritual is performed</p>
         </div>
 
         <div class="temples-grid">
@@ -335,82 +369,730 @@
             </div>
         </div>
 
-        <!-- Benefits strip -->
-        <div class="benefits-strip">
-            <div class="benefit-column">
-                <div class="benefit-icon-wrapper">
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section" id="benefits">
+        <div class="benefits-header">
+            <div class="benefits-subtitle">
+                <span class="line"></span>
+                <span class="ornament">❖</span>
+                BENEFITS OF
+                <span class="ornament">❖</span>
+                <span class="line"></span>
+            </div>
+            <h2 class="benefits-title">Shatru Samhara <span class="gold">Homa</span></h2>
+            <div class="benefits-divider">
+                <span class="ornament">❖</span>
+            </div>
+        </div>
+
+        <div class="benefits-grid">
+            <!-- Column 1 -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
                     <i class="fa-solid fa-shield-halved"></i>
                 </div>
-                <div class="benefit-text-wrapper">
-                    <h4>Divine Protection</h4>
-                    <p>Shields from negativity and harmful influences.</p>
-                </div>
+                <h3 class="benefit-title">Protection from<br>Enemies</h3>
+                <p class="benefit-text">Shields you from known and unknown enemies, negative forces and evil energies.
+                </p>
+                <div class="benefit-bottom-flourish"></div>
             </div>
-            <div class="benefit-column">
-                <div class="benefit-icon-wrapper">
-                    <i class="fa-solid fa-crosshairs"></i>
-                </div>
-                <div class="benefit-text-wrapper">
-                    <h4>Victory Over Obstacles</h4>
-                    <p>Grants success over enemies and challenges.</p>
-                </div>
-            </div>
-            <div class="benefit-column">
-                <div class="benefit-icon-wrapper">
+
+            <!-- Column 2 -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
                     <i class="fa-solid fa-spa"></i>
                 </div>
-                <div class="benefit-text-wrapper">
-                    <h4>Inner Peace</h4>
-                    <p>Brings mental peace and emotional balance.</p>
-                </div>
+                <h3 class="benefit-title">Removal of<br>Obstacles</h3>
+                <p class="benefit-text">Clears all kinds of obstacles in your personal, professional and spiritual
+                    journey.</p>
+                <div class="benefit-bottom-flourish"></div>
             </div>
-            <div class="benefit-column">
-                <div class="benefit-icon-wrapper">
-                    <i class="fa-solid fa-mountain"></i>
+
+            <!-- Column 3 -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fa-solid fa-om"></i>
                 </div>
-                <div class="benefit-text-wrapper">
-                    <h4>Strength & Courage</h4>
-                    <p>Empowers to face life's battles with confidence.</p>
-                </div>
+                <h3 class="benefit-title">Divine Strength<br>& Courage</h3>
+                <p class="benefit-text">Bestows inner strength, courage, confidence and the power to overcome
+                    challenges.</p>
+                <div class="benefit-bottom-flourish"></div>
             </div>
-            <div class="benefit-column">
-                <div class="benefit-icon-wrapper">
-                    <i class="fa-solid fa-sun"></i>
+
+            <!-- Column 4 -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fa-solid fa-bullseye"></i>
                 </div>
-                <div class="benefit-text-wrapper">
-                    <h4>Spiritual Growth</h4>
-                    <p>Enhances devotion, wisdom and inner growth.</p>
+                <h3 class="benefit-title">Success &<br>Victory</h3>
+                <p class="benefit-text">Grants success in all endeavors and ensures victory over adversities and
+                    competitions.</p>
+                <div class="benefit-bottom-flourish"></div>
+            </div>
+
+            <!-- Column 5 -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fa-solid fa-chart-column"></i>
                 </div>
+                <h3 class="benefit-title">Growth &<br>Prosperity</h3>
+                <p class="benefit-text">Invites abundance, wealth, growth and prosperity in every sphere of life.</p>
+                <div class="benefit-bottom-flourish"></div>
+            </div>
+
+            <!-- Column 6 -->
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <h3 class="benefit-title">Peace of Mind &<br>Well-being</h3>
+                <p class="benefit-text">Brings mental peace, emotional balance and overall well-being to you and your
+                    family.</p>
+                <div class="benefit-bottom-flourish"></div>
             </div>
         </div>
     </section>
 
-    <!-- Script for Read More functionality -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const readMoreBtns = document.querySelectorAll('.read-more-btn');
+    <!-- Puja Process Section -->
+    <section class="process-section" id="process">
+        <div class="process-header">
+            <div class="process-icon-top">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 2C10 6 9 9 9 12C9 14.5 10 16 12 16C14 16 15 14.5 15 12C15 9 14 6 12 2Z"
+                        fill="currentColor" />
+                    <path d="M12 16V22" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="process-subtitle">
+                <span class="line"></span>
+                <span class="ornament">❖</span>
+                PUJA PROCESS
+                <span class="ornament">❖</span>
+                <span class="line"></span>
+            </div>
+            <h2 class="process-title">SHATRU SAMHARA HOMA</h2>
+            <div class="process-divider">
+                <span class="ornament">❖</span>
+            </div>
+            <p class="process-desc">A sacred Vedic ritual performed with powerful mantras<br>to defeat enemies, remove
+                obstacles and invoke divine protection.</p>
+        </div>
 
-            readMoreBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const card = btn.closest('.temple-card');
-                    const details = card.querySelector('.temple-details');
-                    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+        <div class="process-flow">
+            <!-- Step 1 -->
+            <div class="process-step step-1">
+                <div class="step-circle"><img src="./images/process1.png" alt="Ganapati Puja" class="step-icon-img">
+                </div>
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">01</div>
+                        <h3 class="step-title">GANAPATI PUJA</h3>
+                    </div>
+                    <p class="step-text">Invocation of Lord Ganapati and removal of all obstacles for the smooth and
+                        successful completion of the Homa.</p>
+                </div>
+                <div class="step-connector right"></div>
+            </div>
 
-                    if (isExpanded) {
-                        btn.setAttribute('aria-expanded', 'false');
-                        btn.classList.remove('active');
-                        details.classList.remove('expanded');
-                        btn.innerHTML = 'Read More <i class="fa-solid fa-chevron-down"></i>';
-                    } else {
-                        btn.setAttribute('aria-expanded', 'true');
-                        btn.classList.add('active');
-                        details.classList.add('expanded');
-                        btn.innerHTML = 'Read Less <i class="fa-solid fa-chevron-up"></i>';
-                    }
-                });
-            });
-        });
-    </script>
+            <!-- Step 2 -->
+            <div class="process-step step-2">
+                <div class="step-circle"><img src="./images/process2.png" alt="Punyaha Vachanam" class="step-icon-img">
+                </div>
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">02</div>
+                        <h3 class="step-title">PUNYAHA VACHANAM</h3>
+                    </div>
+                    <p class="step-text">Purification of the place, participants and ritual materials through sacred
+                        purification mantras.</p>
+                </div>
+                <div class="step-connector right"></div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="process-step step-3">
+                <div class="step-circle"><img src="./images/process3.png" alt="Sankalpam" class="step-icon-img"></div>
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">03</div>
+                        <h3 class="step-title">SANKALPAM</h3>
+                    </div>
+                    <p class="step-text">The Sankalpam is made in the devotee's name with Gotra, Nakshatra and the
+                        purpose for which the Homa is performed.</p>
+                </div>
+                <div class="step-connector down-left"></div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="process-step step-4">
+                <div class="step-circle">
+                    <img src="./images/process4.png" alt="Subramanya Mantra Japa" class="step-icon-img">
+                </div>
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">04</div>
+                        <h3 class="step-title">SUBRAMANYA MANTRA JAPA</h3>
+                    </div>
+                    <p class="step-text">Chanting of powerful Subramanya mantras to invoke divine protection, courage
+                        and strength.</p>
+                </div>
+            </div>
+
+            <!-- Step 5 (Special) -->
+            <div class="process-step step-5 special-step">
+                <div class="step-circle"><img src="./images/process5.png" alt="Shatru Samhara Homa"
+                        class="step-icon-img"></div>
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">05</div>
+                        <h3 class="step-title">SHATRU SAMHARA HOMA</h3>
+                    </div>
+                    <p class="step-text">The sacred Homa is performed in the Homa Kundam with Vedic mantras. Offerings
+                        of ghee, herbs, fruits and other items are offered into the fire to destroy negativity, enemies
+                        and obstacles.</p>
+                    <div class="card-bottom-lotus"><i class="fa-solid fa-spa"></i></div>
+                </div>
+                <div class="step-connector left"></div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="process-step step-6">
+                <div class="step-circle"><img src="./images/process6.png" alt="Poornahuti" class="step-icon-img"></div>
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">06</div>
+                        <h3 class="step-title">POORNAHUTI & AARTI</h3>
+                    </div>
+                    <p class="step-text">The ritual concludes with Poornahuti, the final offering into the fire,
+                        followed by Aarti and divine blessings for peace, protection and prosperity.</p>
+                </div>
+                <div class="step-connector left"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="packages-section" id="packages">
+        <div class="packages-bg-left"></div>
+        <div class="packages-bg-right"></div>
+
+        <div class="packages-container">
+
+            <!-- Packages Grid Section -->
+            <div class="section-header top-lotus-header">
+                <i class="fa-solid fa-spa top-lotus"></i>
+                <div class="header-line-left"></div>
+                <h2><span class="header-subtitle"><span style="color:#dfb873; font-size: 10px;">❖</span> CHOOSE YOUR
+                        <span style="color:#dfb873; font-size: 10px;">❖</span></span> PUJA PACKAGE</h2>
+                <div class="header-line-right"></div>
+            </div>
+
+            <div class="packages-grid new-grid">
+
+                <!-- Card 1: Maroon -->
+                <div class="pkg-card theme-maroon">
+                    <div class="top-circle-icon">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+
+                    <div class="pkg-img-circle">
+                        <img src="images/package-new-1.png" alt="Individual Puja with Remedies"
+                            onerror="this.src='https://placehold.co/300x300/fdf5e6/dfb873?text=Generate+package-new-1.png'">
+                    </div>
+
+                    <h3>INDIVIDUAL PUJA<br>+ REMEDIES</h3>
+                    <p class="pkg-text">Personalized puja with remedies for greater positivity and peace.</p>
+
+                    <button class="action-btn">
+                        <span class="price">₹951</span>
+                        <span class="arrow-circle"><i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                </div>
+
+                <!-- Card 2: Gold -->
+                <div class="pkg-card theme-gold">
+                    <div class="top-circle-icon">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+
+                    <div class="pkg-img-circle">
+                        <img src="images/package-new-2.png" alt="Individual Puja"
+                            onerror="this.src='https://placehold.co/300x300/fdf5e6/dfb873?text=Generate+package-new-2.png'">
+                    </div>
+
+                    <h3>INDIVIDUAL PUJA</h3>
+                    <p class="pkg-text">Ideal for a single individual to participate and seek divine blessings.</p>
+
+                    <button class="action-btn">
+                        <span class="price">₹851</span>
+                        <span class="arrow-circle"><i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                </div>
+
+                <!-- Card 3: Pink-Maroon -->
+                <div class="pkg-card theme-pink">
+                    <div class="top-circle-icon">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+
+                    <div class="pkg-img-circle">
+                        <img src="images/package-new-3.png" alt="Partner Puja"
+                            onerror="this.src='https://placehold.co/300x300/fdf5e6/dfb873?text=Generate+package-new-3.png'">
+                    </div>
+
+                    <h3>PARTNER PUJA</h3>
+                    <p class="pkg-text">Ideal for couples or two family members to participate together.</p>
+
+                    <button class="action-btn">
+                        <span class="price">₹1251</span>
+                        <span class="arrow-circle"><i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                </div>
+
+                <!-- Card 4: Green -->
+                <div class="pkg-card theme-green">
+                    <div class="top-circle-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div class="pkg-img-circle">
+                        <img src="images/package-new-4.png" alt="Family Puja"
+                            onerror="this.src='https://placehold.co/300x300/fdf5e6/dfb873?text=Generate+package-new-4.png'">
+                    </div>
+
+                    <h3>FAMILY PUJA<br>+ BHOJ</h3>
+                    <p class="pkg-text">Perfect for families or close friends to seek blessings and prosperity.</p>
+
+                    <button class="action-btn">
+                        <span class="price">₹2201</span>
+                        <span class="arrow-circle"><i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Trust Footer Box -->
+            <div class="trust-footer-box">
+                <div class="trust-grid">
+                    <div class="t-item">
+                        <div class="t-icon maroon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="t-content">
+                            <h4>100% AUTHENTIC</h4>
+                            <p>Vedic Rituals</p>
+                        </div>
+                    </div>
+                    <div class="t-item">
+                        <div class="t-icon gold"><i class="fa-solid fa-award"></i></div>
+                        <div class="t-content">
+                            <h4>EXPERIENCED</h4>
+                            <p>Vedic Pandits</p>
+                        </div>
+                    </div>
+                    <div class="t-item">
+                        <div class="t-icon maroon"><i class="fa-solid fa-lock"></i></div>
+                        <div class="t-content">
+                            <h4>SECURE & PRIVATE</h4>
+                            <p>Your information is safe with us</p>
+                        </div>
+                    </div>
+                    <div class="t-item">
+                        <div class="t-icon green"><i class="fa-solid fa-spa"></i></div>
+                        <div class="t-content">
+                            <h4>SPIRITUAL & DIVINE</h4>
+                            <p>Experience divine blessings from the comfort of your home</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DEVOTEE REVIEWS SECTION -->
+    <section id="reviews" class="reviews-section">
+        <div class="reviews-container">
+
+            <div class="reviews-header">
+                <div class="reviews-header-icon"><i class="fa-solid fa-seedling"></i></div>
+                <h2 class="reviews-title">DEVOTEE REVIEWS</h2>
+                <p class="reviews-subtitle">Real experiences from devotees who received divine blessings</p>
+            </div>
+
+            <div class="reviews-carousel-wrapper">
+                <button class="carousel-btn prev" id="revPrevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next" id="revNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <div class="reviews-track-container" id="revTrackContainer">
+                    <div class="reviews-track" id="revTrack">
+
+                        <!-- Review 1 -->
+                        <div class="review-card">
+                            <div class="review-quotes">“</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar"><i class="fa-regular fa-user"></i></div>
+                                <div class="reviewer-details">
+                                    <h4>Priya S.</h4>
+                                    <div class="reviewer-stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="review-text">The puja was performed very beautifully and the remedies suggested
+                                were very helpful. Thank you for the positive energy and blessings.</p>
+                            <div class="review-divider">
+                                <div class="line"></div>
+                                <i class="fa-solid fa-seedling"></i>
+                                <div class="line"></div>
+                            </div>
+                            <div class="verified-badge">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Verified Purchase</span>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="review-card">
+                            <div class="review-quotes">“</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar"><i class="fa-regular fa-user"></i></div>
+                                <div class="reviewer-details">
+                                    <h4>Ramesh K.</h4>
+                                    <div class="reviewer-stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="review-text">Very good experience. The panditji explained everything clearly and
+                                the puja video was shared on time. Highly recommended.</p>
+                            <div class="review-divider">
+                                <div class="line"></div>
+                                <i class="fa-solid fa-seedling"></i>
+                                <div class="line"></div>
+                            </div>
+                            <div class="verified-badge">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Verified Purchase</span>
+                            </div>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="review-card">
+                            <div class="review-quotes">“</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar"><i class="fa-regular fa-user"></i></div>
+                                <div class="reviewer-details">
+                                    <h4>Anjali M.</h4>
+                                    <div class="reviewer-stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="review-text">I felt peace and positivity after the puja. The Ashtinadi box was
+                                very good. Everything was done with devotion and professionalism.</p>
+                            <div class="review-divider">
+                                <div class="line"></div>
+                                <i class="fa-solid fa-seedling"></i>
+                                <div class="line"></div>
+                            </div>
+                            <div class="verified-badge">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Verified Purchase</span>
+                            </div>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="review-card">
+                            <div class="review-quotes">“</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar"><i class="fa-regular fa-user"></i></div>
+                                <div class="reviewer-details">
+                                    <h4>Vivek R.</h4>
+                                    <div class="reviewer-stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="review-text">A truly divine experience. The rituals were authentic, and the
+                                overall process was incredibly smooth. Highly satisfied.</p>
+                            <div class="review-divider">
+                                <div class="line"></div>
+                                <i class="fa-solid fa-seedling"></i>
+                                <div class="line"></div>
+                            </div>
+                            <div class="verified-badge">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Verified Purchase</span>
+                            </div>
+                        </div>
+
+                        <!-- Review 5 -->
+                        <div class="review-card">
+                            <div class="review-quotes">“</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar"><i class="fa-regular fa-user"></i></div>
+                                <div class="reviewer-details">
+                                    <h4>Meera T.</h4>
+                                    <div class="reviewer-stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="review-text">The panditji was very knowledgeable. We felt a strong positive
+                                vibration during the homa. I am very grateful for this service.</p>
+                            <div class="review-divider">
+                                <div class="line"></div>
+                                <i class="fa-solid fa-seedling"></i>
+                                <div class="line"></div>
+                            </div>
+                            <div class="verified-badge">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Verified Purchase</span>
+                            </div>
+                        </div>
+
+                        <!-- Review 6 -->
+                        <div class="review-card">
+                            <div class="review-quotes">“</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar"><i class="fa-regular fa-user"></i></div>
+                                <div class="reviewer-details">
+                                    <h4>Sanjay Kumar</h4>
+                                    <div class="reviewer-stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="review-text">I was skeptical about online pujas, but this completely changed my
+                                mind. The entire arrangement was flawless and deeply spiritual.</p>
+                            <div class="review-divider">
+                                <div class="line"></div>
+                                <i class="fa-solid fa-seedling"></i>
+                                <div class="line"></div>
+                            </div>
+                            <div class="verified-badge">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Verified Purchase</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dots -->
+            <div class="carousel-dots" id="revDots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Stats Banner -->
+            <div class="reviews-stats-banner">
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="stat-content">
+                        <h5>2,456+</h5>
+                        <p>Happy Devotees</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <div class="stat-content">
+                        <h5>100% Verified</h5>
+                        <p>Genuine Reviews</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+                    <div class="stat-content">
+                        <h5>4.9 / 5</h5>
+                        <p>Average Rating</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-heart"></i></div>
+                    <div class="stat-content">
+                        <h5>Trusted & Loved</h5>
+                        <p>By Thousands</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Banner -->
+            <div class="reviews-footer-banner">
+                <div class="footer-banner-left">
+                    <div class="footer-banner-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <div class="footer-banner-text">
+                        <p>Your trust inspires us to continue serving with devotion.</p>
+                        <p>Thank you for being a part of our spiritual journey.</p>
+                    </div>
+                </div>
+                <div class="footer-banner-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="faq-section">
+        <!-- Background Mandalas -->
+        <div class="faq-bg faq-bg-left"></div>
+        <div class="faq-bg faq-bg-right"></div>
+
+        <div class="faq-container">
+
+            <div class="faq-header">
+                <div class="faq-header-icon"><i class="fa-solid fa-seedling"></i></div>
+                <h2 class="faq-title">FAQ</h2>
+                <p class="faq-subtitle">Frequently Asked Questions</p>
+                <p class="faq-desc">Find answers to the most common questions about our puja packages and how we serve
+                    you.</p>
+            </div>
+
+            <div class="faq-grid">
+                <!-- Left Column: Accordion 1 (Items 1-4) -->
+                <div class="faq-accordion">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q-icon"><i class="fa-solid fa-book-open"></i></div>
+                            <h4>How does the puja process work?</h4>
+                            <div class="faq-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>Once you book a puja package, our expert panditji will perform the puja on an
+                                    auspicious day.<br>You will receive the puja video on WhatsApp along with prasad
+                                    delivery (if opted).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q-icon"><i class="fa-regular fa-calendar-check"></i></div>
+                            <h4>Can I choose the date and time for the puja?</h4>
+                            <div class="faq-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>Yes, you can select your preferred date during the booking process. Our pandits will
+                                    consult the panchang to confirm the most auspicious timing on that day.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q-icon"><i class="fa-solid fa-box-open"></i></div>
+                            <h4>What is included in the Ashtinadi Box?</h4>
+                            <div class="faq-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>The Ashtinadi Box is a premium spiritual kit containing energized yantras, sacred ash
+                                    (vibhuti), rudraksha, and a detailed instruction manual for continued blessings.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q-icon"><i class="fa-solid fa-video"></i></div>
+                            <h4>When will I receive the puja video?</h4>
+                            <div class="faq-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>A high-quality recorded video of your personalized sankalpam and puja will be shared
+                                    with you via WhatsApp and email within 24 hours of completion.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Accordion 2 (Items 5-7) -->
+                <div class="faq-accordion">
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                            <h4>How is prasad delivered?</h4>
+                            <div class="faq-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>Prasad is carefully packed in eco-friendly, premium packaging and shipped via our
+                                    trusted courier partners. Domestic deliveries take 3-5 business days.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                            <h4>Is the payment secure?</h4>
+                            <div class="faq-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>Absolutely. We use industry-standard encrypted payment gateways to ensure that your
+                                    financial details are completely secure and private.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 7 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q-icon"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+                            <h4>Can I cancel or reschedule my puja?</h4>
+                            <div class="faq-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="answer-content">
+                                <p>You may reschedule your puja up to 48 hours before the scheduled time. Cancellations
+                                    are subject to our refund policy. Please contact support for assistance.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- FAQ Footer Banner -->
+            <div class="faq-footer-banner">
+                <div class="faq-footer-icon"><i class="fa-solid fa-seedling"></i></div>
+                <div class="faq-footer-text">
+                    <p>We are committed to bringing you divine blessings with complete devotion and transparency.</p>
+                    <span>Your faith is our responsibility.</span>
+                </div>
+                <div class="faq-footer-icon"><i class="fa-solid fa-seedling" style="transform: scaleX(-1);"></i></div>
+            </div>
+
+        </div>
+    </section>
 
 </body>
 

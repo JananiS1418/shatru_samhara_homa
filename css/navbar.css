@@ -1,0 +1,105 @@
+/* Premium Floating Navigation Bar Styles */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Offset for the floating navbar */
+}
+
+/* Wrapper to hold the sticky position and center the pill */
+.sub-navbar-wrapper {
+    position: sticky;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    pointer-events: none; /* Let clicks pass through empty space */
+}
+
+/* The floating pill itself */
+.sub-navbar {
+    pointer-events: auto; /* Re-enable clicks on the pill */
+    background: rgba(255, 253, 249, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(223, 184, 115, 0.6);
+    border-radius: 40px;
+    padding: 8px 30px; /* Increased padding to make it wider */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Increased gap */
+    overflow-x: auto;
+    scrollbar-width: none;
+    max-width: 95%; /* Don't touch edges on small screens */
+}
+.sub-navbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual links */
+.nav-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px; /* Increased from 13px */
+    font-weight: 600;
+    color: #4a3831;
+    text-decoration: none;
+    padding: 12px 25px; /* Increased padding */
+    border-radius: 30px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+}
+
+/* Hover and Active states */
+.nav-link:hover {
+    color: #df441c;
+    background: rgba(223, 184, 115, 0.15);
+}
+
+.nav-link.active {
+    background: #3b0609;
+    color: #dfb873;
+    box-shadow: 0 4px 10px rgba(59, 6, 9, 0.2);
+}
+
+/* Tablet Adjustments (Keep single line, just scale down slightly) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .sub-navbar {
+        padding: 6px 15px;
+        gap: 10px;
+        border-radius: 30px;
+    }
+    .nav-link {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile adjustments (Wrap into multiple rows) */
+@media (max-width: 600px) {
+    .sub-navbar-wrapper {
+        top: 10px;
+        padding: 0 10px; /* Add wrapper padding to keep it off the screen edges */
+        box-sizing: border-box;
+    }
+    .sub-navbar {
+        justify-content: center; /* Center the wrapped items */
+        flex-wrap: wrap; /* Wrap into multiple rows */
+        border-radius: 20px;
+        padding: 8px 10px;
+        gap: 8px;
+        max-width: 100%;
+        width: 100%;
+        overflow-x: visible; /* Remove horizontal scrolling */
+    }
+    .nav-link {
+        padding: 6px 12px;
+        font-size: 13px;
+        flex: 1 1 calc(33.333% - 16px); /* Roughly 3 items per row if space permits, or let them size naturally */
+        text-align: center; /* Center text in wrapping boxes */
+    }
+    
+    /* Ensure the last item has space on the right when fully scrolled */
+    .sub-navbar::after {
+        display: none; /* No longer needed as we are wrapping instead of scrolling */
+    }
+}

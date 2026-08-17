@@ -1,0 +1,365 @@
+/* Puja Process Section Stylesheet - Complex Layout */
+.process-section {
+    width: 100%;
+    margin: 0;
+    padding: 50px 5% 40px; /* Reduced bottom padding */
+    background-color: #ffffff; /* Alternating white background */
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    border-top: 1px solid rgba(223, 184, 115, 0.2);
+}
+
+.process-header {
+    text-align: center;
+    margin: 0 auto 70px;
+    max-width: 800px;
+}
+
+.process-icon-top {
+    color: #dfb873;
+    margin-bottom: 15px;
+}
+
+.process-icon-top svg {
+    width: 32px;
+    height: 32px;
+}
+
+.process-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #4a3831;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+.process-subtitle .line {
+    width: 30px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #dfb873, transparent);
+}
+
+.process-subtitle .ornament {
+    font-size: 10px;
+    color: #dfb873;
+}
+
+.process-title {
+    font-family: 'Cinzel', serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: #3b0609;
+    margin: 0 0 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.process-divider {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.process-divider .ornament {
+    color: #dfb873;
+    font-size: 12px;
+}
+
+.process-desc {
+    font-size: 15px;
+    color: #4a3831;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Process Flow Layout - 3x2 Grid */
+.process-flow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 60px 40px; /* Big vertical gap to accommodate overlapping circles */
+    max-width: 1050px;
+    margin: 0 auto 70px;
+    position: relative;
+}
+
+/* Explicit Grid Placement for the Snake pattern */
+.step-1 { grid-column: 1; grid-row: 1; }
+.step-2 { grid-column: 2; grid-row: 1; }
+.step-3 { grid-column: 3; grid-row: 1; }
+.step-4 { grid-column: 1; grid-row: 2; }
+.step-5 { grid-column: 2; grid-row: 2; }
+.step-6 { grid-column: 3; grid-row: 2; }
+
+/* Process Step Container */
+.process-step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+/* Overlapping Circle */
+.step-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #fffdf9;
+    border: 1px solid rgba(223, 184, 115, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -35px; /* Overlap exactly half */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5; /* Above card */
+    box-shadow: 0 4px 15px rgba(223, 184, 115, 0.2);
+    overflow: hidden; /* Ensure image respects border radius */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.process-step:hover .step-circle {
+    transform: translateX(-50%) scale(1.15);
+    box-shadow: 0 8px 25px rgba(223, 184, 115, 0.5);
+    border-color: #dfb873;
+}
+
+.step-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.step-circle i { font-size: 28px; color: #6a1a1e; }
+.step-circle svg { width: 30px; height: 30px; color: #6a1a1e; }
+
+/* Step Card */
+.step-card {
+    background-color: #fffdf9;
+    border: 1px solid rgba(223, 184, 115, 0.4);
+    border-radius: 8px;
+    padding: 50px 20px 20px; /* Space for the overlapping circle */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    width: 100%;
+    flex-grow: 1;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.process-step:hover .step-card {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    border-color: rgba(223, 184, 115, 0.8);
+}
+
+/* The maroon number badge on the top-left */
+.step-number {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    background-color: #3b0609;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 4px 12px;
+    border-radius: 8px 0 8px 0;
+    z-index: 3;
+    border-right: 1px solid #dfb873;
+    border-bottom: 1px solid #dfb873;
+}
+
+.step-header {
+    margin-bottom: 12px;
+}
+
+.step-title {
+    font-size: 12px;
+    font-weight: 800;
+    color: #3b0609;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.step-text {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #4a3831;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* Special Step 5 Styling */
+@keyframes pulseSpecialCard {
+    0% { box-shadow: 0 0 0 3px #fffaf2, 0 0 0 4px rgba(223, 184, 115, 0.3); }
+    50% { box-shadow: 0 0 0 3px #fffaf2, 0 0 0 8px rgba(223, 184, 115, 0.6); }
+    100% { box-shadow: 0 0 0 3px #fffaf2, 0 0 0 4px rgba(223, 184, 115, 0.3); }
+}
+
+@keyframes pulseSpecialCircle {
+    0% { box-shadow: 0 4px 15px rgba(223, 184, 115, 0.3), 0 0 0 0 rgba(223, 184, 115, 0.4); }
+    50% { box-shadow: 0 4px 15px rgba(223, 184, 115, 0.5), 0 0 0 8px rgba(223, 184, 115, 0.2); }
+    100% { box-shadow: 0 4px 15px rgba(223, 184, 115, 0.3), 0 0 0 0 rgba(223, 184, 115, 0.4); }
+}
+
+.special-step .step-card {
+    background: linear-gradient(180deg, #fffdf9, #fff9ee);
+    border: 1px solid rgba(223, 184, 115, 0.8);
+    box-shadow: 0 0 0 3px #fffaf2, 0 0 0 4px rgba(223, 184, 115, 0.3); /* double border effect */
+    animation: pulseSpecialCard 3s infinite ease-in-out;
+}
+.special-step .step-circle {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    border: 1px solid #dfb873;
+    animation: pulseSpecialCircle 3s infinite ease-in-out;
+    background-color: #ffffff;
+}
+.special-step .step-circle i { font-size: 34px; color: #e65100; } /* Glowing fire */
+.special-step .step-title {
+    color: #6a1a1e;
+    font-size: 14px;
+}
+.card-bottom-lotus {
+    color: #dfb873;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* Connectors */
+.step-connector {
+    position: absolute;
+    z-index: 1;
+}
+
+/* Right arrow (1->2, 2->3) */
+.step-connector.right {
+    top: 50%;
+    right: -20px;
+    width: 20px;
+    height: 1px;
+    background-color: rgba(223, 184, 115, 0.6);
+}
+.step-connector.right::after {
+    content: '\f054'; /* fa-chevron-right */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c97116;
+    font-size: 12px;
+}
+
+/* Left arrow (6->5, 5->4) */
+.step-connector.left {
+    top: 50%;
+    left: -20px;
+    width: 20px;
+    height: 1px;
+    background-color: rgba(223, 184, 115, 0.6);
+}
+.step-connector.left::after {
+    content: '\f053'; /* fa-chevron-left */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c97116;
+    font-size: 12px;
+}
+
+/* The complex Snake line (3->6) */
+.step-connector.down-left {
+    top: 50%;
+    right: -25px;
+    width: 25px;
+    height: calc(100% + 60px); /* Height of card + 60px vertical gap */
+    border-top: 1px solid rgba(223, 184, 115, 0.6);
+    border-right: 1px solid rgba(223, 184, 115, 0.6);
+    border-bottom: 1px solid rgba(223, 184, 115, 0.6);
+    border-radius: 0 8px 8px 0;
+}
+.step-connector.down-left::after {
+    content: '\f078'; /* fa-chevron-down */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    right: -5.5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c97116;
+    font-size: 12px;
+    background-color: #fffaf2; /* Cover the line */
+    padding: 4px 0;
+}
+.step-connector.down-left::before {
+    content: '\f053'; /* fa-chevron-left */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    bottom: -6.5px;
+    left: 0;
+    color: #c97116;
+    font-size: 12px;
+}
+
+.process-footer .footer-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(223, 184, 115, 0.5), transparent);
+    width: 100px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .process-flow {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+    .step-1 { grid-column: 1; grid-row: 1; }
+    .step-2 { grid-column: 2; grid-row: 1; }
+    .step-3 { grid-column: 1; grid-row: 2; }
+    .step-4 { grid-column: 2; grid-row: 2; }
+    .step-5 { grid-column: 1; grid-row: 3; }
+    .step-6 { grid-column: 2; grid-row: 3; }
+    
+    .step-connector { display: none; } /* Hide complex arrows on mobile */
+}
+
+@media (max-width: 600px) {
+    .process-title {
+        font-size: 30px;
+    }
+    .process-flow {
+        grid-template-columns: 1fr;
+    }
+    .step-1, .step-2, .step-3, .step-4, .step-5, .step-6 {
+        grid-column: 1;
+        grid-row: auto;
+    }
+    .process-footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+    }
+    .footer-divider {
+        width: 40px;
+        height: 1px;
+    }
+}
