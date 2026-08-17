@@ -288,7 +288,40 @@
 
 @media (max-width: 768px) {
     .about-container {
-        flex-direction: column; /* Stack only on mobile */
+        gap: 20px;
+        padding: 30px 15px;
+    }
+    .about-visual {
+        flex: 0 0 240px;
+    }
+    .about-main-image {
+        height: 280px;
+    }
+    .about-section {
+        padding: 40px 2% 40px;
+    }
+    .about-title {
+        font-size: 24px;
+    }
+    .about-text {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    .feature-icon {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    .feature-label {
+        font-size: 8px;
+    }
+    .about-features-card {
+        padding: 15px 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-container {
+        flex-direction: column; /* Stack on mobile */
         padding: 30px 20px;
     }
     .about-visual {
@@ -297,20 +330,15 @@
         max-width: 400px;
     }
     .about-main-image {
-        height: 350px;
-    }
-    .about-section {
-        padding: 40px 5% 50px;
+        height: 300px;
     }
     .about-title {
-        font-size: 32px;
+        font-size: 28px;
     }
-}
-
-@media (max-width: 600px) {
     .about-features-card {
         flex-wrap: wrap;
         gap: 20px 0;
+        padding: 20px 15px;
     }
     .feature-item {
         flex: 0 0 50%;
@@ -322,10 +350,10 @@
 
 @media (max-width: 480px) {
     .about-main-image {
-        height: 300px;
+        height: 250px;
     }
     .about-title {
-        font-size: 26px;
+        font-size: 24px;
     }
     .feature-item {
         flex: 0 0 50%; /* Keep 2 per row on very small screens */
