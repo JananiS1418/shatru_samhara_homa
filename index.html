@@ -17,7 +17,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/experience.css">
     <link rel="stylesheet" href="css/temples.css">
     <link rel="stylesheet" href="css/benefits.css">
     <link rel="stylesheet" href="css/process.css">
@@ -116,7 +115,6 @@
     <div class="sub-navbar-wrapper">
         <nav class="sub-navbar">
             <a href="#about" class="nav-link active">About Homa</a>
-            <a href="#experience" class="nav-link">Experience</a>
             <a href="#temples" class="nav-link">Temple Details</a>
             <a href="#benefits" class="nav-link">Benefits</a>
             <a href="#process" class="nav-link">Process</a>
@@ -129,8 +127,9 @@
     <!-- About Section -->
     <section class="about-section" id="about">
         <div class="about-container">
-            <!-- Left Side: Image -->
-            <div class="about-visual">
+            <div class="about-top-row">
+                <!-- Left Side: Image -->
+                <div class="about-visual">
                 <div class="about-image-wrapper">
                     <!-- The dark maroon top badge -->
                     <div class="about-image-badge">
@@ -197,85 +196,55 @@
             </div>
         </div>
 
-        <!-- Decorative Bottom Border -->
-        <div class="about-bottom-border"></div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="experience-section" id="experience">
-        <div class="experience-header">
-            <h2 class="experience-title">EXPERIENCE THE <span class="gold">SACRED RITUAL</span></h2>
-            <p class="experience-desc">
-                Hear the powerful mantras. Witness the sacred fire.<br>
-                Experience a glimpse of the Shatru Samhara Homa.
-            </p>
-        </div>
-
-        <div class="experience-content">
-            <!-- Video Player Placeholder -->
-            <div class="video-player-container">
-                <img src="images/video.png" alt="Shatru Samhara Homa Video" class="video-poster">
-                
-                <div class="video-badge">
-                    <i class="fa-solid fa-vihara"></i> AUTHENTIC HOMA MOMENT
-                </div>
-
-                <div class="play-button-overlay">
-                    <i class="fa-solid fa-play"></i>
-                </div>
-
-                <!-- Custom Mockup Controls -->
-                <div class="video-controls-mockup">
-                    <i class="fa-solid fa-play control-icon"></i>
-                    
-                    <div class="progress-bar-container">
-                        <div class="progress-filled"></div>
-                        <div class="progress-knob"></div>
-                    </div>
-                    
-                    <span class="time-display">0:24 / 0:58</span>
-                    
-                    <div class="right-controls">
-                        <i class="fa-solid fa-volume-high control-icon"></i>
-                        <i class="fa-solid fa-gear control-icon"></i>
-                        <i class="fa-solid fa-expand control-icon"></i>
-                    </div>
-                </div>
+        <!-- Experience Section within About -->
+        <div class="experience-wrapper" style="position: relative; z-index: 2; width: 100%;">
+            <div class="experience-header">
+                <h2 class="experience-title">EXPERIENCE THE <span class="gold">SACRED RITUAL</span></h2>
+                <p class="experience-desc">
+                    Hear the powerful mantras. Witness the sacred fire.<br>
+                    Experience a glimpse of the Shatru Samhara Homa.
+                </p>
             </div>
 
-            <!-- Features Bar -->
-            <div class="experience-features-bar">
-                <div class="exp-feature">
-                    <div class="exp-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
-                    <div class="exp-text">
-                        <h5>POWERFUL MANTRAS</h5>
-                        <p>Chanted by<br>Vedic Priests</p>
+            <div class="experience-content">
+                <!-- Video Player Placeholder -->
+                <div class="video-player-container">
+                    <img src="images/video.png" alt="Shatru Samhara Homa Video" class="video-poster">
+                    
+                    <div class="video-badge">
+                        <i class="fa-solid fa-vihara"></i> AUTHENTIC HOMA MOMENT
+                    </div>
+
+                    <div class="play-button-overlay">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+
+                    <!-- Custom Mockup Controls -->
+                    <div class="video-controls-mockup">
+                        <i class="fa-solid fa-play control-icon"></i>
+                        
+                        <div class="progress-bar-container">
+                            <div class="progress-filled"></div>
+                            <div class="progress-knob"></div>
+                        </div>
+                        
+                        <span class="time-display">0:24 / 0:58</span>
+                        
+                        <div class="right-controls">
+                            <i class="fa-solid fa-volume-high control-icon"></i>
+                            <i class="fa-solid fa-gear control-icon"></i>
+                            <i class="fa-solid fa-expand control-icon"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="exp-feature">
-                    <div class="exp-icon"><i class="fa-solid fa-fire"></i></div>
-                    <div class="exp-text">
-                        <h5>SACRED FIRE</h5>
-                        <p>Purifies and<br>protects</p>
-                    </div>
-                </div>
-                <div class="exp-feature">
-                    <div class="exp-icon"><i class="fa-solid fa-bowl-rice"></i></div>
-                    <div class="exp-text">
-                        <h5>HOLY OFFERINGS</h5>
-                        <p>Ghee, Herbs &<br>Sacred items</p>
-                    </div>
-                </div>
-                <div class="exp-feature">
-                    <div class="exp-icon"><i class="fa-solid fa-bell"></i></div>
-                    <div class="exp-text">
-                        <h5>POORNAHUTI & AARTI</h5>
-                        <p>Blessings for victory<br>& peace</p>
-                    </div>
-                </div>
+
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- Decorative Bottom Border -->
+    <div class="about-bottom-border"></div>
+</section>
 
     <!-- Temples of Lord Subramanya Section -->
     <!-- Note: Recommended Temple Image Size to generate: 800x500 pixels (aspect ratio 1.6:1) -->
