@@ -221,7 +221,9 @@ body {
    TYPOGRAPHY & INTERNAL LAYOUT (Common)
 ========================================= */
 
-.tab-br { display: none; }
+.tab-br {
+    display: none;
+}
 
 /* Badge */
 .hero-badge {
@@ -493,8 +495,13 @@ body {
         text-align: left;
     }
 
-    .tab-br { display: block; }
-    .desktop-br { display: none; }
+    .tab-br {
+        display: block;
+    }
+
+    .desktop-br {
+        display: none;
+    }
 
     .hero-badge {
         margin-bottom: 12px;
@@ -591,7 +598,8 @@ body {
         flex-direction: column;
         position: relative;
         background-color: var(--bg-color);
-        width: auto; /* Override 100% to allow margin without overflowing */
+        width: auto;
+        /* Override 100% to allow margin without overflowing */
         margin: 12px;
         border-radius: 20px;
         border: 1px solid rgba(223, 184, 115, 0.4);
@@ -620,11 +628,11 @@ body {
 
     .homa-content {
         position: absolute;
-        top: 40%;
+        top: 45%;
         bottom: 0%;
         left: 0;
         width: 100%;
-        padding: 0 4vw;
+        padding: 0 4vw 2vw 4vw;
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -636,12 +644,12 @@ body {
 
     .hero-badge {
         margin-bottom: 2vw;
-        padding: 1vw 2vw;
-        font-size: 2.2vw;
+        padding: 1.2vw 2.5vw;
+        font-size: 2.5vw;
     }
 
     .hero-title {
-        font-size: 6vw;
+        font-size: 7.5vw;
         line-height: 1.1;
         margin-bottom: 1.5vw;
         margin-top: 0.5vw;
@@ -660,18 +668,18 @@ body {
     }
 
     .hero-divider {
-        margin-bottom: 2vw;
+        margin-bottom: 1.5vw;
     }
 
     .hero-subtitle {
-        font-size: 2.6vw;
+        font-size: 3vw;
         text-align: center;
         margin-bottom: 1.5vw;
         line-height: 1.2;
     }
 
     .hero-description {
-        font-size: 2.2vw;
+        font-size: 2.5vw;
         text-align: center;
         margin-bottom: 2.5vw;
         max-width: 95%;
@@ -682,31 +690,31 @@ body {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
-        gap: 2vw;
-        margin-bottom: 4vw;
+        gap: 1.5vw;
+        margin-bottom: 3vw;
     }
 
     .feature-item {
         background-color: transparent;
         border: none;
-        padding: 1vw;
+        padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
         text-align: center;
-        gap: 1.5vw;
+        gap: 1vw;
     }
 
     .icon-circle {
         margin-bottom: 0;
-        width: 5.5vw;
-        height: 5.5vw;
-        font-size: 2.5vw;
+        width: 6.5vw;
+        height: 6.5vw;
+        font-size: 3vw;
     }
 
     .feature-text {
-        font-size: 2.3vw;
+        font-size: 2.6vw;
         line-height: 1.2;
     }
 
@@ -719,12 +727,15 @@ body {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        gap: 2.5vw;
+        gap: 2vw;
+        margin-top: 1vw;
     }
 
     .btn {
-        width: 80%;
-        font-size: 3vw;
-        padding: 2.5vw;
+        width: max-content;
+        max-width: 95%;
+        font-size: 4vw;
+        padding: 2.5vw 5vw;
+        white-space: nowrap;
     }
 }

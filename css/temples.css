@@ -302,7 +302,7 @@
 }
 
 .temple-details.expanded {
-    max-height: 200px;
+    max-height: 400px;
     opacity: 1;
     margin-top: 15px;
     padding: 20px 15px;
@@ -384,5 +384,30 @@
     .temple-card {
         max-width: 340px; /* Prevents card from stretching too wide on mobile */
         margin: 0 auto; /* Centers the card */
+    }
+    .temples-description {
+        font-size: 15px;
+    }
+    .temple-name {
+        font-size: 20px;
+    }
+    .temple-location, .temple-location i {
+        font-size: 13px;
+    }
+    .temple-brief {
+        font-size: 14.5px;
+    }
+    .details-content {
+        font-size: 14.5px;
+    }
+    .read-more-btn {
+        font-size: 14px;
+    }
+}
+
+/* Tablet & Laptop Adjustments */
+@media (min-width: 601px) {
+    .temples-description {
+        font-size: 14px;
     }
 }

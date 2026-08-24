@@ -5,7 +5,8 @@
     width: 100%;
     margin: 0;
     padding: 25px 5% 70px;
-    background-color: #fffaf2; /* Light cream */
+    background-color: #fffaf2;
+    /* Light cream */
     position: relative;
     font-family: 'Inter', sans-serif;
     border-top: 1px solid rgba(223, 184, 115, 0.2);
@@ -25,7 +26,8 @@
     bottom: -50px;
     width: 300px;
     height: 300px;
-    background-image: url('../images/mandala-bg.png'); /* Assume same mandala */
+    background-image: url('../images/mandala-bg.png');
+    /* Assume same mandala */
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.1;
@@ -104,7 +106,7 @@
     border-radius: 12px;
     padding: 25px 20px;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
     transition: all 0.4s ease;
@@ -254,7 +256,7 @@
     border: 1px solid rgba(223, 184, 115, 0.3);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
 .faq-item {
@@ -335,7 +337,8 @@
 }
 
 .answer-content {
-    padding: 0 25px 25px 85px; /* Aligned with text, skipping icon */
+    padding: 0 25px 25px 85px;
+    /* Aligned with text, skipping icon */
 }
 
 .answer-content p {
@@ -349,7 +352,8 @@
 
 /* Active State */
 .faq-item.active {
-    background-color: rgba(223, 184, 115, 0.08); /* light subtle tint */
+    background-color: rgba(223, 184, 115, 0.08);
+    /* light subtle tint */
 }
 
 .faq-item.active .faq-toggle {
@@ -389,6 +393,7 @@
 .faq-footer-icon:last-child::before {
     display: none;
 }
+
 .faq-footer-icon:last-child::after {
     content: '';
     width: 30px;
@@ -416,27 +421,28 @@
 /* Responsive */
 @media (max-width: 990px) {
     /* Keep 2 columns on tablet, no need to override grid-template-columns here */
-    
+
     .faq-help-card {
-        order: 2; /* Move help card below FAQ on mobile */
+        order: 2;
+        /* Move help card below FAQ on mobile */
     }
-    
+
     .faq-accordion {
         order: 1;
     }
-    
+
     .help-contact-list {
         flex-direction: row;
         justify-content: center;
         gap: 40px;
         flex-wrap: wrap;
     }
-    
+
     .help-contact-item {
         border-bottom: none;
         padding-bottom: 0;
     }
-    
+
     .help-contact-btn {
         width: auto;
         min-width: 300px;
@@ -451,7 +457,7 @@
         background-color: #fffdf9;
         border: 1px solid rgba(223, 184, 115, 0.3);
         border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     }
 
     .faq-accordion {
@@ -469,16 +475,16 @@
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .faq-footer-icon::before,
     .faq-footer-icon::after {
         display: none !important;
     }
-    
+
     .answer-content {
         padding: 0 20px 20px 20px;
     }
-    
+
     .answer-content p {
         border-left: none;
         padding-left: 0;
@@ -491,20 +497,30 @@
         align-items: flex-start;
         gap: 20px;
     }
-    
+
     .help-contact-item {
         border-bottom: 1px solid rgba(223, 184, 115, 0.2);
         padding-bottom: 15px;
         width: 100%;
     }
-    
+
     .help-contact-item:last-child {
         border-bottom: none;
         padding-bottom: 0;
     }
-    
+
     .help-contact-btn {
         width: 100%;
         min-width: auto;
+    }
+}
+
+/* Tablet & Laptop Adjustments */
+@media (min-width: 601px) {
+    .faq-desc {
+        font-size: 15px;
+    }
+    .faq-answer {
+        font-size: 16px;
     }
 }

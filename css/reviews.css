@@ -380,7 +380,23 @@
     }
     
     .reviews-title {
-        font-size: 28px;
+        font-size: 32px;
+    }
+    
+    .reviewer-details h4 {
+        font-size: 19px;
+    }
+    
+    .review-text {
+        font-size: 15px;
+    }
+    
+    .reviewer-stars {
+        font-size: 15px;
+    }
+    
+    .verified-badge span {
+        font-size: 13px;
     }
     
     .reviews-stats-banner {
@@ -399,13 +415,51 @@
         gap: 8px;
     }
     
+    .stat-content h5 {
+        font-size: 19px;
+    }
+    
+    .stat-content p {
+        font-size: 13px;
+    }
+    
+    .stat-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+    }
+    
     .reviews-footer-banner {
         flex-direction: column;
         text-align: center;
         gap: 15px;
     }
+    
     .footer-banner-left {
         flex-direction: column;
         gap: 10px;
+    }
+    
+    .footer-banner-icon {
+        font-size: 38px;
+    }
+    
+    .footer-banner-text p {
+        font-size: 16px;
+    }
+    
+    .footer-banner-text p:last-child {
+        font-size: 14px;
+    }
+    
+    .footer-banner-stars {
+        font-size: 22px;
+    }
+}
+
+/* Tablet & Laptop Adjustments */
+@media (min-width: 601px) {
+    .review-text {
+        font-size: 13px;
     }
 }

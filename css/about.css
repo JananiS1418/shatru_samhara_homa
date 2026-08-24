@@ -2,7 +2,7 @@
 .about-section {
     width: 100%;
     margin: 0;
-    padding: 60px 5% 40px; /* Reduced bottom padding */
+    padding: 60px 5% 10px; /* Reduced bottom padding */
     position: relative;
     background-color: #ffffff; /* Page background */
     font-family: 'Inter', sans-serif;
@@ -333,7 +333,10 @@
         height: 300px;
     }
     .about-title {
-        font-size: 28px;
+        font-size: 30px;
+    }
+    .about-text {
+        font-size: 15px;
     }
     .about-features-card {
         flex-wrap: wrap;
@@ -342,6 +345,12 @@
     }
     .feature-item {
         flex: 0 0 50%;
+    }
+    .feature-icon {
+        font-size: 24px;
+    }
+    .feature-label {
+        font-size: 10px;
     }
     .feature-divider {
         display: none;
@@ -353,12 +362,28 @@
         height: 250px;
     }
     .about-title {
-        font-size: 24px;
+        font-size: 26px;
+    }
+    .about-text {
+        font-size: 14px;
+    }
+    .feature-icon {
+        font-size: 22px;
+    }
+    .feature-label {
+        font-size: 9px;
     }
     .feature-item {
         flex: 0 0 50%; /* Keep 2 per row on very small screens */
     }
     .about-features-card {
         padding: 20px 5px; /* Reduce padding slightly to fit 2 items better */
+    }
+}
+
+/* Tablet & Laptop Adjustments */
+@media (min-width: 601px) {
+    .about-text {
+        font-size: 16px;
     }
 }

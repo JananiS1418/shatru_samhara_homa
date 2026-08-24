@@ -536,6 +536,35 @@
         margin: 0 auto; /* Center it */
     }
 
+    /* Mobile font increases */
+    .pkg-card h3 {
+        font-size: 19px;
+    }
+    
+    .pkg-text {
+        font-size: 14.5px;
+    }
+    
+    .action-btn {
+        font-size: 20px;
+    }
+    
+    .arrow-circle {
+        font-size: 16px;
+    }
+    
+    .t-icon {
+        font-size: 26px;
+    }
+    
+    .t-content h4 {
+        font-size: 14px;
+    }
+    
+    .t-content p {
+        font-size: 12px;
+    }
+
     .trust-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -543,5 +572,15 @@
 
     .t-item::after {
         display: none !important;
+    }
+}
+
+/* Tablet & Laptop Adjustments */
+@media (min-width: 601px) {
+    .packages-desc {
+        font-size: 15px;
+    }
+    .package-feature {
+        font-size: 14px;
     }
 }

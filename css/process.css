@@ -342,8 +342,27 @@
 }
 
 @media (max-width: 600px) {
+    .process-subtitle {
+        font-size: 15px;
+    }
     .process-title {
-        font-size: 30px;
+        font-size: 34px;
+    }
+    .process-desc {
+        font-size: 18px;
+    }
+    .step-number {
+        font-size: 16px;
+        padding: 6px 14px;
+    }
+    .step-title {
+        font-size: 16px;
+    }
+    .step-text {
+        font-size: 15px;
+    }
+    .special-step .step-title {
+        font-size: 18px;
     }
     .process-flow {
         grid-template-columns: 1fr;
@@ -360,5 +379,15 @@
     .footer-divider {
         width: 40px;
         height: 1px;
+    }
+}
+
+/* Tablet & Laptop Adjustments */
+@media (min-width: 601px) {
+    .process-desc {
+        font-size: 16px;
+    }
+    .step-desc {
+        font-size: 13px;
     }
 }

@@ -190,13 +190,13 @@
     }
 
     .benefit-icon {
-        width: 65px;
-        height: 65px;
+        width: 75px;
+        height: 75px;
         margin-bottom: 20px;
     }
 
     .benefit-icon i {
-        font-size: 26px;
+        font-size: 32px;
     }
 
     .benefit-icon::after {
@@ -205,17 +205,24 @@
     }
 
     .benefit-title {
-        font-size: 13px;
+        font-size: 16px;
         min-height: 48px;
         margin-bottom: 8px;
     }
 
     .benefit-text {
-        font-size: 11px;
+        font-size: 13.5px;
         margin-bottom: 15px;
     }
 
     .benefit-bottom-flourish {
         font-size: 11px;
+    }
+}
+
+/* Tablet & Laptop Adjustments */
+@media (min-width: 601px) {
+    .benefit-text {
+        font-size: 13px;
     }
 }
