@@ -1,7 +1,8 @@
 /* Premium Floating Navigation Bar Styles */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* Offset for the floating navbar */
+    scroll-padding-top: 100px;
+    /* Offset for the floating navbar */
 }
 
 /* Wrapper to hold the sticky position and center the pill */
@@ -12,26 +13,36 @@ html {
     display: flex;
     justify-content: center;
     z-index: 100;
-    pointer-events: none; /* Let clicks pass through empty space */
+    pointer-events: none;
+    /* Let clicks pass through empty space */
 }
 
 /* The floating pill itself */
+.mobile-scroll-indicator {
+    display: none;
+}
+
 .sub-navbar {
-    pointer-events: auto; /* Re-enable clicks on the pill */
+    pointer-events: auto;
+    /* Re-enable clicks on the pill */
     background: rgba(255, 253, 249, 0.95);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(223, 184, 115, 0.6);
     border-radius: 40px;
-    padding: 8px 30px; /* Increased padding to make it wider */
+    padding: 8px 30px;
+    /* Increased padding to make it wider */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px; /* Increased gap */
+    gap: 15px;
+    /* Increased gap */
     overflow-x: auto;
     scrollbar-width: none;
-    max-width: 95%; /* Don't touch edges on small screens */
+    max-width: 95%;
+    /* Don't touch edges on small screens */
 }
+
 .sub-navbar::-webkit-scrollbar {
     display: none;
 }
@@ -39,11 +50,13 @@ html {
 /* Individual links */
 .nav-link {
     font-family: 'Inter', sans-serif;
-    font-size: 15px; /* Increased from 13px */
+    font-size: 15px;
+    /* Increased from 13px */
     font-weight: 600;
     color: #4a3831;
     text-decoration: none;
-    padding: 12px 25px; /* Increased padding */
+    padding: 12px 25px;
+    /* Increased padding */
     border-radius: 30px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     white-space: nowrap;
@@ -68,6 +81,7 @@ html {
         gap: 10px;
         border-radius: 30px;
     }
+
     .nav-link {
         padding: 10px 16px;
         font-size: 14px;
@@ -77,31 +91,76 @@ html {
 /* Mobile adjustments (Wrap into multiple rows) */
 @media (max-width: 600px) {
     .sub-navbar-wrapper {
-        top: 20px; /* More space from the top of the screen */
-        padding: 0 15px; /* Keep it further off the screen edges */
+        top: 20px;
+        /* More space from the top of the screen */
+        padding: 0 15px;
+        /* Keep it further off the screen edges */
         box-sizing: border-box;
+        position: sticky; /* Keep it sticky while allowing absolute children */
     }
+
+    .mobile-scroll-indicator {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 32px;
+        height: 32px;
+        background: rgba(255, 253, 249, 0.95); /* Light background */
+        color: #3b0609; /* Dark maroon arrow */
+        border: 1px solid rgba(223, 184, 115, 0.6); /* Gold border */
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        pointer-events: auto; /* Allow clicks */
+        z-index: 105;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        opacity: 0.95;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        cursor: pointer;
+    }
+
+    .mobile-scroll-indicator.right {
+        right: 5px; /* Sits further out to block less text */
+    }
+
+    .mobile-scroll-indicator.left {
+        left: 5px;
+    }
+
+    .mobile-scroll-indicator:active {
+        transform: translateY(-50%) scale(0.95);
+        /* Subtle tap effect without changing colors */
+    }
+
     .sub-navbar {
         justify-content: flex-start;
         flex-wrap: nowrap;
         border-radius: 40px;
         padding: 10px 15px;
-        gap: 15px; /* Increased gap between links so they aren't 'so near' */
+        gap: 15px;
+        /* Increased gap between links so they aren't 'so near' */
         max-width: 100%;
         width: 100%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
-        background: rgba(255, 253, 249, 0.98); /* Slightly more solid background on mobile */
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Stronger shadow to lift it up */
+        background: rgba(255, 253, 249, 0.98);
+        /* Slightly more solid background on mobile */
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        /* Stronger shadow to lift it up */
+        pointer-events: auto;
     }
+
     .nav-link {
-        padding: 10px 20px; /* Bigger tap target and more internal space */
+        padding: 10px 20px;
+        /* Bigger tap target and more internal space */
         font-size: 14px;
         flex: 0 0 auto;
         scroll-snap-align: start;
     }
-    
+
     /* Ensure the last item has space on the right when fully scrolled */
     .sub-navbar::after {
         content: '';

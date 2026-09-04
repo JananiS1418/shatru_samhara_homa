@@ -112,8 +112,9 @@
     </section>
 
     <!-- Premium Sticky Navigation Bar -->
-    <div class="sub-navbar-wrapper">
-        <nav class="sub-navbar">
+    <div class="sub-navbar-wrapper" id="subNavbarWrapper">
+        <button class="mobile-scroll-indicator left" id="navArrowLeft" aria-label="Scroll left" style="opacity: 0; pointer-events: none;"><i class="fas fa-chevron-left"></i></button>
+        <nav class="sub-navbar" id="subNavbar">
             <a href="#about" class="nav-link active">About Homa</a>
             <a href="#temples" class="nav-link">Temple Details</a>
             <a href="#benefits" class="nav-link">Benefits</a>
@@ -122,6 +123,7 @@
             <a href="#reviews" class="nav-link">Reviews</a>
             <a href="#faq" class="nav-link">FAQs</a>
         </nav>
+        <button class="mobile-scroll-indicator right" id="navArrowRight" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
     </div>
 
     <!-- About Section -->
@@ -130,98 +132,99 @@
             <div class="about-top-row">
                 <!-- Left Side: Image -->
                 <div class="about-visual">
-                <div class="about-image-wrapper">
-                    <!-- The dark maroon top badge -->
-                    <div class="about-image-badge">
-                        <i class="fa-solid fa-fire"></i> <!-- Using fire icon as lamp approximation -->
+                    <div class="about-image-wrapper">
+                        <!-- The dark maroon top badge -->
+                        <div class="about-image-badge">
+                            <i class="fa-solid fa-fire"></i> <!-- Using fire icon as lamp approximation -->
+                        </div>
+                        <!-- The main image -->
+                        <img src="images/about.png" alt="Sacred Fire Ritual" class="about-main-image">
                     </div>
-                    <!-- The main image -->
-                    <img src="images/about.png" alt="Sacred Fire Ritual" class="about-main-image">
+                </div>
+
+                <!-- Right Side: Content -->
+                <div class="about-content">
+                    <div class="about-subtitle">
+                        <span class="line"></span>
+                        <span class="ornament">❖</span>
+                        ABOUT THE HOMA
+                        <span class="ornament">❖</span>
+                        <span class="line"></span>
+                    </div>
+
+                    <div class="about-header-ornament">
+                        <i class="fa-solid fa-dharmachakra"></i>
+                    </div>
+
+                    <h2 class="about-title">WHAT IS<br>SHATRU SAMHARA HOMA?</h2>
+
+                    <div class="about-title-ornament">
+                        <span class="ornament">❖</span>
+                    </div>
+
+                    <div class="about-text-container">
+                        <p class="about-text">
+                            Shatru Samhara Homa is a sacred Vedic fire ritual performed with specific mantras and
+                            offerings
+                            to seek divine protection and overcome adversaries, obstacles and negativity.
+                        </p>
+                        <p class="about-text">
+                            This powerful ritual helps in removing negativity, ensuring obstacles and bringing success,
+                            peace and prosperity in life.
+                        </p>
+                    </div>
+
+                    <!-- Features Card at bottom -->
+                    <div class="about-features-card">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="feature-label">DIVINE<br>PROTECTION</div>
+                        </div>
+                        <div class="feature-divider"></div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-spa"></i></div>
+                            <div class="feature-label">POSITIVE<br>TRANSFORMATION</div>
+                        </div>
+                        <div class="feature-divider"></div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-om"></i></div>
+                            <div class="feature-label">VEDIC<br>MANTRAS</div>
+                        </div>
+                        <div class="feature-divider"></div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                            <div class="feature-label">SACRED FIRE<br>RITUAL</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Right Side: Content -->
-            <div class="about-content">
-                <div class="about-subtitle">
-                    <span class="line"></span>
-                    <span class="ornament">❖</span>
-                    ABOUT THE HOMA
-                    <span class="ornament">❖</span>
-                    <span class="line"></span>
-                </div>
-
-                <div class="about-header-ornament">
-                    <i class="fa-solid fa-dharmachakra"></i>
-                </div>
-
-                <h2 class="about-title">WHAT IS<br>SHATRU SAMHARA HOMA?</h2>
-
-                <div class="about-title-ornament">
-                    <span class="ornament">❖</span>
-                </div>
-
-                <div class="about-text-container">
-                    <p class="about-text">
-                        Shatru Samhara Homa is a sacred Vedic fire ritual performed with specific mantras and offerings
-                        to seek divine protection and overcome adversaries, obstacles and negativity.
-                    </p>
-                    <p class="about-text">
-                        This powerful ritual helps in removing negativity, ensuring obstacles and bringing success,
-                        peace and prosperity in life.
+            <!-- Experience Section within About -->
+            <div class="experience-wrapper" style="position: relative; z-index: 2; width: 100%;">
+                <div class="experience-header">
+                    <h2 class="experience-title">EXPERIENCE THE <span class="gold">SACRED RITUAL</span></h2>
+                    <p class="experience-desc">
+                        Hear the powerful mantras. Witness the sacred fire.<br>
+                        Experience a glimpse of the Shatru Samhara Homa.
                     </p>
                 </div>
 
-                <!-- Features Card at bottom -->
-                <div class="about-features-card">
-                    <div class="feature-item">
-                        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                        <div class="feature-label">DIVINE<br>PROTECTION</div>
+                <div class="experience-content">
+                    <!-- Actual Video Player -->
+                    <div class="video-player-container">
+                        <video controls class="responsive-video" width="100%">
+                            <source src="video/Shatru Samhara Homa.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
-                    <div class="feature-divider"></div>
-                    <div class="feature-item">
-                        <div class="feature-icon"><i class="fa-solid fa-spa"></i></div>
-                        <div class="feature-label">POSITIVE<br>TRANSFORMATION</div>
-                    </div>
-                    <div class="feature-divider"></div>
-                    <div class="feature-item">
-                        <div class="feature-icon"><i class="fa-solid fa-om"></i></div>
-                        <div class="feature-label">VEDIC<br>MANTRAS</div>
-                    </div>
-                    <div class="feature-divider"></div>
-                    <div class="feature-item">
-                        <div class="feature-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
-                        <div class="feature-label">SACRED FIRE<br>RITUAL</div>
-                    </div>
+
                 </div>
             </div>
         </div>
 
-        <!-- Experience Section within About -->
-        <div class="experience-wrapper" style="position: relative; z-index: 2; width: 100%;">
-            <div class="experience-header">
-                <h2 class="experience-title">EXPERIENCE THE <span class="gold">SACRED RITUAL</span></h2>
-                <p class="experience-desc">
-                    Hear the powerful mantras. Witness the sacred fire.<br>
-                    Experience a glimpse of the Shatru Samhara Homa.
-                </p>
-            </div>
-
-            <div class="experience-content">
-                <!-- Actual Video Player -->
-                <div class="video-player-container">
-                    <video controls class="responsive-video" width="100%">
-                        <source src="video/Shatru Samhara Homa.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Decorative Bottom Border -->
-    <div class="about-bottom-border"></div>
-</section>
+        <!-- Decorative Bottom Border -->
+        <div class="about-bottom-border"></div>
+    </section>
 
     <!-- Temples of Lord Subramanya Section -->
     <!-- Note: Recommended Temple Image Size to generate: 800x500 pixels (aspect ratio 1.6:1) -->
@@ -568,8 +571,8 @@
 
             <!-- Step 5 (Special) -->
             <div class="process-step step-5 special-step">
-                <div class="step-circle"><img src="images/process5.png" alt="Shatru Samhara Homa"
-                        class="step-icon-img"></div>
+                <div class="step-circle"><img src="images/process5.png" alt="Shatru Samhara Homa" class="step-icon-img">
+                </div>
                 <div class="step-card">
                     <div class="step-header">
                         <div class="step-number">05</div>
