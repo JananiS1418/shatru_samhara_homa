@@ -268,9 +268,11 @@
     .transform-card {
         max-width: 100%;
     }
-    .transform-arrow {
+    .transform-arrow,
+    .transform-arrow:nth-child(4) {
         transform: rotate(90deg);
-        margin: 5px 0;
+        margin: 5px auto;
+        align-self: center;
     }
     .transform-card.ritual-card {
         transform: none;
