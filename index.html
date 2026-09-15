@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/reviews.css">
     <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/transformation.css">
 
     <!-- External Script with defer -->
     <!-- SVG Assets -->
@@ -113,7 +114,8 @@
 
     <!-- Premium Sticky Navigation Bar -->
     <div class="sub-navbar-wrapper" id="subNavbarWrapper">
-        <button class="mobile-scroll-indicator left" id="navArrowLeft" aria-label="Scroll left" style="opacity: 0; pointer-events: none;"><i class="fas fa-chevron-left"></i></button>
+        <button class="mobile-scroll-indicator left" id="navArrowLeft" aria-label="Scroll left"
+            style="opacity: 0; pointer-events: none;"><i class="fas fa-chevron-left"></i></button>
         <nav class="sub-navbar" id="subNavbar">
             <a href="#about" class="nav-link active">About Homa</a>
             <a href="#temples" class="nav-link">Temple Details</a>
@@ -123,8 +125,82 @@
             <a href="#reviews" class="nav-link">Reviews</a>
             <a href="#faq" class="nav-link">FAQs</a>
         </nav>
-        <button class="mobile-scroll-indicator right" id="navArrowRight" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
+        <button class="mobile-scroll-indicator right" id="navArrowRight" aria-label="Scroll right"><i
+                class="fas fa-chevron-right"></i></button>
     </div>
+
+    <!-- Transformation Section -->
+    <section class="transformation-section" id="transformation">
+        <div class="transformation-header">
+            <div class="transformation-subtitle">
+                <span class="ornament">❖</span>
+                REAL TRANSFORMATION
+                <span class="ornament">❖</span>
+            </div>
+
+            <h2 class="transformation-title">Real Transformation</h2>
+            <h3 class="transformation-subtext">From Obstacles to Divine Protection</h3>
+
+            <p class="transformation-desc">
+                Countless devotees have experienced positive changes through Shatru Samhara Homa.<br>
+                Here's how the divine process creates transformation in your life.
+            </p>
+        </div>
+
+        <div class="transformation-container">
+            <!-- Card 1: Before -->
+            <div class="transform-card">
+                <img src="images/before.png" alt="Before - Struggling with Challenges" class="card-image"
+                    onerror="this.src='https://placehold.co/130x160/fdfaf6/3b0609?text=Before'">
+                <div class="card-content">
+                    <h3>Before</h3>
+                    <p class="card-subtitle">Struggling with Challenges</p>
+                    <ul class="transform-list negative">
+                        <li><i class="fa-solid fa-circle-xmark"></i> Obstacles in personal and professional life</li>
+                        <li><i class="fa-solid fa-circle-xmark"></i> Stress and mental turmoil</li>
+                        <li><i class="fa-solid fa-circle-xmark"></i> Delays in important plans</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Arrow 1 -->
+            <i class="fa-solid fa-arrow-right transform-arrow"></i>
+
+            <!-- Card 2: The Ritual -->
+            <div class="transform-card ritual-card">
+                <img src="images/ritual.png" alt="The Ritual - Shatru Samhara Homa" class="card-image"
+                    onerror="this.src='https://placehold.co/160x160/fdfaf6/dfb873?text=The+Ritual'">
+                <div class="card-content">
+                    <h3 style="text-align: center;">The Ritual</h3>
+                    <p class="card-subtitle" style="text-align: center;">Shatru Samhara Homa</p>
+                    <div class="about-title-ornament">
+                        <span class="ornament">❖</span>
+                    </div>
+                    <p class="ritual-desc" style="text-align: center;">
+                        Performed with authentic Vedic rituals and sankalpam by experienced priests.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Arrow 2 -->
+            <i class="fa-solid fa-arrow-right transform-arrow"></i>
+
+            <!-- Card 3: After -->
+            <div class="transform-card">
+                <img src="images/after.png" alt="After - A Brighter, Safer Tomorrow" class="card-image"
+                    onerror="this.src='https://placehold.co/130x160/fdfaf6/5cb85c?text=After'">
+                <div class="card-content">
+                    <h3>After</h3>
+                    <p class="card-subtitle">A Brighter, Safer Tomorrow</p>
+                    <ul class="transform-list positive">
+                        <li><i class="fa-solid fa-circle-check"></i> Protection from negative influences</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Inner peace and confidence</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Success and smooth progress</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section class="about-section" id="about">
@@ -144,58 +220,45 @@
 
                 <!-- Right Side: Content -->
                 <div class="about-content">
-                    <div class="about-subtitle">
-                        <span class="line"></span>
-                        <span class="ornament">❖</span>
-                        ABOUT THE HOMA
-                        <span class="ornament">❖</span>
-                        <span class="line"></span>
-                    </div>
-
                     <div class="about-header-ornament">
-                        <i class="fa-solid fa-dharmachakra"></i>
-                    </div>
-
-                    <h2 class="about-title">WHAT IS<br>SHATRU SAMHARA HOMA?</h2>
-
-                    <div class="about-title-ornament">
                         <span class="ornament">❖</span>
                     </div>
 
-                    <div class="about-text-container">
+                    <div class="about-subtitle new-style">
+                        <span class="line"></span>
+                        <i class="fa-solid fa-arrow-right-long" style="color: #dfb873; margin-right: 5px;"></i>
+                        ABOUT THE HOMA
+                        <i class="fa-solid fa-arrow-left-long" style="color: #dfb873; margin-left: 5px;"></i>
+                        <span class="line"></span>
+                    </div>
+
+                    <h2 class="about-title new-title">Shatru Samhara Homa</h2>
+                    <h3 class="about-sub-title">Invoke Lord Muruga's Divine Protection</h3>
+
+                    <div class="about-text-container new-text">
                         <p class="about-text">
-                            Shatru Samhara Homa is a sacred Vedic fire ritual performed with specific mantras and
-                            offerings
-                            to seek divine protection and overcome adversaries, obstacles and negativity.
-                        </p>
-                        <p class="about-text">
-                            This powerful ritual helps in removing negativity, ensuring obstacles and bringing success,
-                            peace and prosperity in life.
+                            Lord Subrahmanya (Muruga), the divine commander, is worshipped for his courage, wisdom and
+                            power to destroy negativities. Shatru Samhara Homa is a sacred Vedic fire ritual performed
+                            to seek his blessings, remove enemies and obstacles, neutralize negative energies and bring
+                            peace, success and prosperity in life. Through this powerful ritual, devotees receive divine
+                            protection, gain strength to overcome challenges and move forward with confidence.
                         </p>
                     </div>
 
-                    <!-- Features Card at bottom -->
-                    <div class="about-features-card">
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                            <div class="feature-label">DIVINE<br>PROTECTION</div>
+                    <div class="about-quote-container">
+                        <div class="quote-ornament-top">
+                            <span class="line"></span>
+                            <i class="fa-solid fa-spa"></i>
+                            <span class="line"></span>
                         </div>
-                        <div class="feature-divider"></div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fa-solid fa-spa"></i></div>
-                            <div class="feature-label">POSITIVE<br>TRANSFORMATION</div>
-                        </div>
-                        <div class="feature-divider"></div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fa-solid fa-om"></i></div>
-                            <div class="feature-label">VEDIC<br>MANTRAS</div>
-                        </div>
-                        <div class="feature-divider"></div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
-                            <div class="feature-label">SACRED FIRE<br>RITUAL</div>
+                        <p class="about-quote">"With Muruga's grace, every obstacle turns into an opportunity."</p>
+                        <div class="quote-ornament-bottom">
+                            <span class="line"></span>
+                            <span class="dot">❖</span>
+                            <span class="line"></span>
                         </div>
                     </div>
+
                 </div>
             </div>
 
@@ -402,84 +465,101 @@
 
     <!-- Benefits Section -->
     <section class="benefits-section" id="benefits">
-        <div class="benefits-header">
-            <div class="benefits-subtitle">
-                <span class="line"></span>
-                <span class="ornament">❖</span>
-                BENEFITS OF
-                <span class="ornament">❖</span>
-                <span class="line"></span>
-            </div>
-            <h2 class="benefits-title">Shatru Samhara <span class="gold">Homa</span></h2>
-            <div class="benefits-divider">
-                <span class="ornament">❖</span>
-            </div>
+        <!-- Background Mandalas -->
+        <div class="bg-mandala mandala-left">
+            <svg viewBox="0 0 200 400" width="100%" height="100%" opacity="0.05">
+                <circle cx="0" cy="200" r="150" fill="none" stroke="#dfb873" stroke-width="2" />
+                <circle cx="0" cy="200" r="120" fill="none" stroke="#dfb873" stroke-width="1" stroke-dasharray="4 4" />
+                <path d="M 0,50 Q 80,120 150,200 Q 80,280 0,350" fill="none" stroke="#dfb873" stroke-width="1.5" />
+                <path d="M 0,80 Q 60,140 120,200 Q 60,260 0,320" fill="none" stroke="#dfb873" stroke-width="1" />
+            </svg>
+        </div>
+        <div class="bg-mandala mandala-right">
+            <svg viewBox="0 0 200 400" width="100%" height="100%" opacity="0.05">
+                <circle cx="200" cy="200" r="150" fill="none" stroke="#dfb873" stroke-width="2" />
+                <circle cx="200" cy="200" r="120" fill="none" stroke="#dfb873" stroke-width="1"
+                    stroke-dasharray="4 4" />
+                <path d="M 200,50 Q 120,120 50,200 Q 120,280 200,350" fill="none" stroke="#dfb873" stroke-width="1.5" />
+                <path d="M 200,80 Q 140,140 80,200 Q 140,260 200,320" fill="none" stroke="#dfb873" stroke-width="1" />
+            </svg>
         </div>
 
-        <div class="benefits-grid">
-            <!-- Column 1 -->
-            <div class="benefit-card">
-                <div class="benefit-icon">
-                    <i class="fa-solid fa-shield-halved"></i>
-                </div>
-                <h3 class="benefit-title">Protection from<br>Enemies</h3>
-                <p class="benefit-text">Shields you from known and unknown enemies, negative forces and evil energies.
-                </p>
-                <div class="benefit-bottom-flourish"></div>
+        <div class="benefits-header">
+            <div class="benefits-subtitle">
+                <span class="ornament-diamond">❖</span>
+                BENEFITS OF
+                <span class="ornament-diamond">❖</span>
             </div>
+            <h2 class="benefits-title">Shatru Samhara <span class="gold">Homa</span></h2>
+            <p class="benefits-tagline">Divine blessings for protection, progress and a more peaceful life.</p>
+        </div>
 
-            <!-- Column 2 -->
-            <div class="benefit-card">
-                <div class="benefit-icon">
-                    <i class="fa-solid fa-spa"></i>
+        <div class="benefits-premium-container">
+            <div class="benefits-grid">
+                <!-- Item 1 -->
+                <div class="benefit-card">
+                    <div class="benefit-img-wrapper">
+                        <img src="images/benefit-1.png" alt="Protection from Enemies" class="benefit-img">
+                    </div>
+                    <div class="card-divider">
+                        <span class="line"></span>
+                        <span class="diamond">❖</span>
+                        <span class="line"></span>
+                    </div>
+                    <h3 class="benefit-title">Protection From<br>Enemies</h3>
                 </div>
-                <h3 class="benefit-title">Removal of<br>Obstacles</h3>
-                <p class="benefit-text">Clears all kinds of obstacles in your personal, professional and spiritual
-                    journey.</p>
-                <div class="benefit-bottom-flourish"></div>
-            </div>
 
-            <!-- Column 3 -->
-            <div class="benefit-card">
-                <div class="benefit-icon">
-                    <i class="fa-solid fa-om"></i>
+                <!-- Item 2 -->
+                <div class="benefit-card">
+                    <div class="benefit-img-wrapper">
+                        <img src="images/benefit-2.png" alt="Removal of Obstacles" class="benefit-img">
+                    </div>
+                    <div class="card-divider">
+                        <span class="line"></span>
+                        <span class="diamond">❖</span>
+                        <span class="line"></span>
+                    </div>
+                    <h3 class="benefit-title">Removal of<br>Obstacles</h3>
                 </div>
-                <h3 class="benefit-title">Divine Strength<br>& Courage</h3>
-                <p class="benefit-text">Bestows inner strength, courage, confidence and the power to overcome
-                    challenges.</p>
-                <div class="benefit-bottom-flourish"></div>
-            </div>
 
-            <!-- Column 4 -->
-            <div class="benefit-card">
-                <div class="benefit-icon">
-                    <i class="fa-solid fa-bullseye"></i>
+                <!-- Item 3 -->
+                <div class="benefit-card">
+                    <div class="benefit-img-wrapper">
+                        <img src="images/benefit-3.png" alt="Success & Victory" class="benefit-img">
+                    </div>
+                    <div class="card-divider">
+                        <span class="line"></span>
+                        <span class="diamond">❖</span>
+                        <span class="line"></span>
+                    </div>
+                    <h3 class="benefit-title">Success &<br>Victory</h3>
                 </div>
-                <h3 class="benefit-title">Success &<br>Victory</h3>
-                <p class="benefit-text">Grants success in all endeavors and ensures victory over adversities and
-                    competitions.</p>
-                <div class="benefit-bottom-flourish"></div>
-            </div>
 
-            <!-- Column 5 -->
-            <div class="benefit-card">
-                <div class="benefit-icon">
-                    <i class="fa-solid fa-chart-column"></i>
+                <!-- Item 4 -->
+                <div class="benefit-card">
+                    <div class="benefit-img-wrapper">
+                        <img src="images/benefit-4.png" alt="Peace of Mind" class="benefit-img">
+                    </div>
+                    <div class="card-divider">
+                        <span class="line"></span>
+                        <span class="diamond">❖</span>
+                        <span class="line"></span>
+                    </div>
+                    <h3 class="benefit-title">Peace of<br>Mind</h3>
                 </div>
-                <h3 class="benefit-title">Growth &<br>Prosperity</h3>
-                <p class="benefit-text">Invites abundance, wealth, growth and prosperity in every sphere of life.</p>
-                <div class="benefit-bottom-flourish"></div>
-            </div>
 
-            <!-- Column 6 -->
-            <div class="benefit-card">
-                <div class="benefit-icon">
-                    <i class="fa-solid fa-heart"></i>
+                <!-- Item 5 -->
+                <div class="benefit-card">
+                    <div class="benefit-img-wrapper">
+                        <img src="images/benefit-5.png" alt="Health & Vitality" class="benefit-img">
+                    </div>
+                    <div class="card-divider">
+                        <span class="line"></span>
+                        <span class="diamond">❖</span>
+                        <span class="line"></span>
+                    </div>
+                    <h3 class="benefit-title">Health &<br>Vitality</h3>
                 </div>
-                <h3 class="benefit-title">Peace of Mind &<br>Well-being</h3>
-                <p class="benefit-text">Brings mental peace, emotional balance and overall well-being to you and your
-                    family.</p>
-                <div class="benefit-bottom-flourish"></div>
             </div>
         </div>
     </section>
@@ -702,39 +782,7 @@
 
             </div>
 
-            <!-- Trust Footer Box -->
-            <div class="trust-footer-box">
-                <div class="trust-grid">
-                    <div class="t-item">
-                        <div class="t-icon maroon"><i class="fa-solid fa-shield-halved"></i></div>
-                        <div class="t-content">
-                            <h4>100% AUTHENTIC</h4>
-                            <p>Vedic Rituals</p>
-                        </div>
-                    </div>
-                    <div class="t-item">
-                        <div class="t-icon gold"><i class="fa-solid fa-award"></i></div>
-                        <div class="t-content">
-                            <h4>EXPERIENCED</h4>
-                            <p>Vedic Pandits</p>
-                        </div>
-                    </div>
-                    <div class="t-item">
-                        <div class="t-icon maroon"><i class="fa-solid fa-lock"></i></div>
-                        <div class="t-content">
-                            <h4>SECURE & PRIVATE</h4>
-                            <p>Your information is safe with us</p>
-                        </div>
-                    </div>
-                    <div class="t-item">
-                        <div class="t-icon green"><i class="fa-solid fa-spa"></i></div>
-                        <div class="t-content">
-                            <h4>SPIRITUAL & DIVINE</h4>
-                            <p>Experience divine blessings from the comfort of your home</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
         </div>
     </section>
