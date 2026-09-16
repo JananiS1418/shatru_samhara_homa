@@ -34,7 +34,7 @@ html {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Safely align start to prevent clipping, wrapper handles centering */
     gap: 15px;
     /* Increased gap */
     overflow-x: auto;
@@ -88,17 +88,8 @@ html {
     }
 }
 
-/* Mobile adjustments (Wrap into multiple rows) */
-@media (max-width: 600px) {
-    .sub-navbar-wrapper {
-        top: 20px;
-        /* More space from the top of the screen */
-        padding: 0 15px;
-        /* Keep it further off the screen edges */
-        box-sizing: border-box;
-        position: sticky; /* Keep it sticky while allowing absolute children */
-    }
-
+/* Enable scroll indicators on tablet & mobile */
+@media (max-width: 1024px) {
     .mobile-scroll-indicator {
         display: flex;
         position: absolute;
@@ -133,6 +124,20 @@ html {
         transform: translateY(-50%) scale(0.95);
         /* Subtle tap effect without changing colors */
     }
+}
+
+/* Mobile adjustments (Wrap into multiple rows) */
+@media (max-width: 600px) {
+    .sub-navbar-wrapper {
+        top: 20px;
+        /* More space from the top of the screen */
+        padding: 0 15px;
+        /* Keep it further off the screen edges */
+        box-sizing: border-box;
+        position: sticky; /* Keep it sticky while allowing absolute children */
+    }
+
+    /* End of mobile adjustments */
 
     .sub-navbar {
         justify-content: flex-start;

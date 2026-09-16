@@ -233,19 +233,22 @@
 }
 
 @media (max-width: 600px) {
-    .why-card {
-        flex: 0 0 calc(50% - 15px);
-        max-width: 250px;
+    .why-choose-grid {
+        gap: 10px; /* Smaller gap for tiny screens */
     }
 
+    .why-card {
+        flex: 0 0 calc(50% - 5px); /* Force 2 columns */
+        max-width: none;
+        min-width: 0; /* Important: overrides the 180px min-width so they fit */
+    }
+
+    /* Properly apply font size reduction */
+    .why-choose-title {
+        font-size: 18px;
+        line-height: 1.2;
+    }
     .why-choose-title .highlight {
-        font-size: 40px;
-    }
-}
-
-@media (max-width: 400px) {
-    .why-card {
-        flex: 0 0 100%;
-        max-width: 300px;
+        font-size: 24px;
     }
 }
